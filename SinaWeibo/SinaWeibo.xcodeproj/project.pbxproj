@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		716DF24E067E44A03AAAEE91 /* Pods_SinaWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */; };
+		CDCA10021E910A0F00485435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10011E910A0F00485435 /* AppDelegate.swift */; };
+		CDCA10091E910A1000485435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCA10081E910A1000485435 /* Assets.xcassets */; };
+		CDCA100C1E910A1000485435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCA100A1E910A1000485435 /* LaunchScreen.storyboard */; };
+		CDCA10421E91174B00485435 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10201E91174B00485435 /* Constraint.swift */; };
+		CDCA10431E91174B00485435 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10211E91174B00485435 /* ConstraintAttributes.swift */; };
+		CDCA10441E91174B00485435 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10221E91174B00485435 /* ConstraintConfig.swift */; };
+		CDCA10451E91174B00485435 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10231E91174B00485435 /* ConstraintConstantTarget.swift */; };
+		CDCA10461E91174B00485435 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10241E91174B00485435 /* ConstraintDescription.swift */; };
+		CDCA10471E91174B00485435 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10251E91174B00485435 /* ConstraintDSL.swift */; };
+		CDCA10481E91174B00485435 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10261E91174B00485435 /* ConstraintInsets.swift */; };
+		CDCA10491E91174B00485435 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10271E91174B00485435 /* ConstraintInsetTarget.swift */; };
+		CDCA104A1E91174B00485435 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10281E91174B00485435 /* ConstraintItem.swift */; };
+		CDCA104B1E91174B00485435 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10291E91174B00485435 /* ConstraintLayoutGuide+Extensions.swift */; };
+		CDCA104C1E91174B00485435 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA102A1E91174B00485435 /* ConstraintLayoutGuide.swift */; };
+		CDCA104D1E91174B00485435 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA102B1E91174B00485435 /* ConstraintLayoutGuideDSL.swift */; };
+		CDCA104E1E91174B00485435 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA102C1E91174B00485435 /* ConstraintLayoutSupport.swift */; };
+		CDCA104F1E91174B00485435 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA102D1E91174B00485435 /* ConstraintLayoutSupportDSL.swift */; };
+		CDCA10501E91174B00485435 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA102E1E91174B00485435 /* ConstraintMaker.swift */; };
+		CDCA10511E91174B00485435 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA102F1E91174B00485435 /* ConstraintMakerEditable.swift */; };
+		CDCA10521E91174B00485435 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10301E91174B00485435 /* ConstraintMakerExtendable.swift */; };
+		CDCA10531E91174B00485435 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10311E91174B00485435 /* ConstraintMakerFinalizable.swift */; };
+		CDCA10541E91174B00485435 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10321E91174B00485435 /* ConstraintMakerPriortizable.swift */; };
+		CDCA10551E91174B00485435 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10331E91174B00485435 /* ConstraintMakerRelatable.swift */; };
+		CDCA10561E91174B00485435 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10341E91174B00485435 /* ConstraintMultiplierTarget.swift */; };
+		CDCA10571E91174B00485435 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10351E91174B00485435 /* ConstraintOffsetTarget.swift */; };
+		CDCA10581E91174B00485435 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10361E91174B00485435 /* ConstraintPriorityTarget.swift */; };
+		CDCA10591E91174B00485435 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10371E91174B00485435 /* ConstraintRelatableTarget.swift */; };
+		CDCA105A1E91174B00485435 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10381E91174B00485435 /* ConstraintRelation.swift */; };
+		CDCA105B1E91174B00485435 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10391E91174B00485435 /* ConstraintView+Extensions.swift */; };
+		CDCA105C1E91174B00485435 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA103A1E91174B00485435 /* ConstraintView.swift */; };
+		CDCA105D1E91174B00485435 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA103B1E91174B00485435 /* ConstraintViewDSL.swift */; };
+		CDCA105E1E91174B00485435 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA103C1E91174B00485435 /* Debugging.swift */; };
+		CDCA105F1E91174B00485435 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDCA103D1E91174B00485435 /* Info.plist */; };
+		CDCA10601E91174B00485435 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA103E1E91174B00485435 /* LayoutConstraint.swift */; };
+		CDCA10611E91174B00485435 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA103F1E91174B00485435 /* LayoutConstraintItem.swift */; };
+		CDCA10621E91174B00485435 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10411E91174B00485435 /* UILayoutSupport+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinaWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B2B2EC9A1BBFCC1EDB702D9 /* Pods-SinaWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.debug.xcconfig"; sourceTree = "<group>"; };
+		6AF7D130B3462326A8D397B8 /* Pods-SinaWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.release.xcconfig"; sourceTree = "<group>"; };
+		CDCA0FFE1E910A0F00485435 /* SinaWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDCA10011E910A0F00485435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDCA10081E910A1000485435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDCA100B1E910A1000485435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDCA100D1E910A1000485435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCA10201E91174B00485435 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		CDCA10211E91174B00485435 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
+		CDCA10221E91174B00485435 /* ConstraintConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConfig.swift; sourceTree = "<group>"; };
+		CDCA10231E91174B00485435 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantTarget.swift; sourceTree = "<group>"; };
+		CDCA10241E91174B00485435 /* ConstraintDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
+		CDCA10251E91174B00485435 /* ConstraintDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDSL.swift; sourceTree = "<group>"; };
+		CDCA10261E91174B00485435 /* ConstraintInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintInsets.swift; sourceTree = "<group>"; };
+		CDCA10271E91174B00485435 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		CDCA10281E91174B00485435 /* ConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintItem.swift; sourceTree = "<group>"; };
+		CDCA10291E91174B00485435 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
+		CDCA102A1E91174B00485435 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
+		CDCA102B1E91174B00485435 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
+		CDCA102C1E91174B00485435 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
+		CDCA102D1E91174B00485435 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
+		CDCA102E1E91174B00485435 /* ConstraintMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
+		CDCA102F1E91174B00485435 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerEditable.swift; sourceTree = "<group>"; };
+		CDCA10301E91174B00485435 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		CDCA10311E91174B00485435 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		CDCA10321E91174B00485435 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
+		CDCA10331E91174B00485435 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		CDCA10341E91174B00485435 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
+		CDCA10351E91174B00485435 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		CDCA10361E91174B00485435 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
+		CDCA10371E91174B00485435 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
+		CDCA10381E91174B00485435 /* ConstraintRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelation.swift; sourceTree = "<group>"; };
+		CDCA10391E91174B00485435 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		CDCA103A1E91174B00485435 /* ConstraintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintView.swift; sourceTree = "<group>"; };
+		CDCA103B1E91174B00485435 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintViewDSL.swift; sourceTree = "<group>"; };
+		CDCA103C1E91174B00485435 /* Debugging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debugging.swift; sourceTree = "<group>"; };
+		CDCA103D1E91174B00485435 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCA103E1E91174B00485435 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
+		CDCA103F1E91174B00485435 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
+		CDCA10401E91174B00485435 /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
+		CDCA10411E91174B00485435 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDCA0FFB1E910A0F00485435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				716DF24E067E44A03AAAEE91 /* Pods_SinaWeibo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		010BEF232D998E6683F20ACA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B2B2EC9A1BBFCC1EDB702D9 /* Pods-SinaWeibo.debug.xcconfig */,
+				6AF7D130B3462326A8D397B8 /* Pods-SinaWeibo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		72ABCB21BADA3FDB580FEEF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDCA0FF51E910A0F00485435 = {
+			isa = PBXGroup;
+			children = (
+				CDCA10001E910A0F00485435 /* SinaWeibo */,
+				CDCA0FFF1E910A0F00485435 /* Products */,
+				010BEF232D998E6683F20ACA /* Pods */,
+				72ABCB21BADA3FDB580FEEF7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CDCA0FFF1E910A0F00485435 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA0FFE1E910A0F00485435 /* SinaWeibo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDCA10001E910A0F00485435 /* SinaWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA101E1E9112A900485435 /* Default */,
+				CDCA10131E91129B00485435 /* Classes */,
+				CDCA101C1E91129B00485435 /* Lib */,
+				CDCA101D1E91129B00485435 /* Tools */,
+			);
+			path = SinaWeibo;
+			sourceTree = "<group>";
+		};
+		CDCA10131E91129B00485435 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA10141E91129B00485435 /* Model */,
+				CDCA10151E91129B00485435 /* View */,
+				CDCA101B1E91129B00485435 /* ViewModel */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CDCA10141E91129B00485435 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDCA10151E91129B00485435 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA10161E91129B00485435 /* Discover */,
+				CDCA10171E91129B00485435 /* Home */,
+				CDCA10181E91129B00485435 /* Main */,
+				CDCA10191E91129B00485435 /* Message */,
+				CDCA101A1E91129B00485435 /* Profile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDCA10161E91129B00485435 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		CDCA10171E91129B00485435 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CDCA10181E91129B00485435 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CDCA10191E91129B00485435 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		CDCA101A1E91129B00485435 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CDCA101B1E91129B00485435 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDCA101C1E91129B00485435 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA101F1E91174B00485435 /* SnapKit */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		CDCA101D1E91129B00485435 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CDCA101E1E9112A900485435 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA10011E910A0F00485435 /* AppDelegate.swift */,
+				CDCA10081E910A1000485435 /* Assets.xcassets */,
+				CDCA100A1E910A1000485435 /* LaunchScreen.storyboard */,
+				CDCA100D1E910A1000485435 /* Info.plist */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		CDCA101F1E91174B00485435 /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA10201E91174B00485435 /* Constraint.swift */,
+				CDCA10211E91174B00485435 /* ConstraintAttributes.swift */,
+				CDCA10221E91174B00485435 /* ConstraintConfig.swift */,
+				CDCA10231E91174B00485435 /* ConstraintConstantTarget.swift */,
+				CDCA10241E91174B00485435 /* ConstraintDescription.swift */,
+				CDCA10251E91174B00485435 /* ConstraintDSL.swift */,
+				CDCA10261E91174B00485435 /* ConstraintInsets.swift */,
+				CDCA10271E91174B00485435 /* ConstraintInsetTarget.swift */,
+				CDCA10281E91174B00485435 /* ConstraintItem.swift */,
+				CDCA10291E91174B00485435 /* ConstraintLayoutGuide+Extensions.swift */,
+				CDCA102A1E91174B00485435 /* ConstraintLayoutGuide.swift */,
+				CDCA102B1E91174B00485435 /* ConstraintLayoutGuideDSL.swift */,
+				CDCA102C1E91174B00485435 /* ConstraintLayoutSupport.swift */,
+				CDCA102D1E91174B00485435 /* ConstraintLayoutSupportDSL.swift */,
+				CDCA102E1E91174B00485435 /* ConstraintMaker.swift */,
+				CDCA102F1E91174B00485435 /* ConstraintMakerEditable.swift */,
+				CDCA10301E91174B00485435 /* ConstraintMakerExtendable.swift */,
+				CDCA10311E91174B00485435 /* ConstraintMakerFinalizable.swift */,
+				CDCA10321E91174B00485435 /* ConstraintMakerPriortizable.swift */,
+				CDCA10331E91174B00485435 /* ConstraintMakerRelatable.swift */,
+				CDCA10341E91174B00485435 /* ConstraintMultiplierTarget.swift */,
+				CDCA10351E91174B00485435 /* ConstraintOffsetTarget.swift */,
+				CDCA10361E91174B00485435 /* ConstraintPriorityTarget.swift */,
+				CDCA10371E91174B00485435 /* ConstraintRelatableTarget.swift */,
+				CDCA10381E91174B00485435 /* ConstraintRelation.swift */,
+				CDCA10391E91174B00485435 /* ConstraintView+Extensions.swift */,
+				CDCA103A1E91174B00485435 /* ConstraintView.swift */,
+				CDCA103B1E91174B00485435 /* ConstraintViewDSL.swift */,
+				CDCA103C1E91174B00485435 /* Debugging.swift */,
+				CDCA103D1E91174B00485435 /* Info.plist */,
+				CDCA103E1E91174B00485435 /* LayoutConstraint.swift */,
+				CDCA103F1E91174B00485435 /* LayoutConstraintItem.swift */,
+				CDCA10401E91174B00485435 /* SnapKit.h */,
+				CDCA10411E91174B00485435 /* UILayoutSupport+Extensions.swift */,
+			);
+			path = SnapKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDCA0FFD1E910A0F00485435 /* SinaWeibo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDCA10101E910A1000485435 /* Build configuration list for PBXNativeTarget "SinaWeibo" */;
+			buildPhases = (
+				CE64935BAFB822D9282ACE99 /* [CP] Check Pods Manifest.lock */,
+				CDCA0FFA1E910A0F00485435 /* Sources */,
+				CDCA0FFB1E910A0F00485435 /* Frameworks */,
+				CDCA0FFC1E910A0F00485435 /* Resources */,
+				53DA04EC0E77B0376A0D7D03 /* [CP] Embed Pods Frameworks */,
+				6D129F8768D5791EEB3760A0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SinaWeibo;
+			productName = SinaWeibo;
+			productReference = CDCA0FFE1E910A0F00485435 /* SinaWeibo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDCA0FF61E910A0F00485435 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WB;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = LockLight;
+				TargetAttributes = {
+					CDCA0FFD1E910A0F00485435 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CDCA0FF91E910A0F00485435 /* Build configuration list for PBXProject "SinaWeibo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDCA0FF51E910A0F00485435;
+			productRefGroup = CDCA0FFF1E910A0F00485435 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDCA0FFD1E910A0F00485435 /* SinaWeibo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDCA0FFC1E910A0F00485435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDCA100C1E910A1000485435 /* LaunchScreen.storyboard in Resources */,
+				CDCA10091E910A1000485435 /* Assets.xcassets in Resources */,
+				CDCA105F1E91174B00485435 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53DA04EC0E77B0376A0D7D03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D129F8768D5791EEB3760A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE64935BAFB822D9282ACE99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDCA0FFA1E910A0F00485435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDCA10561E91174B00485435 /* ConstraintMultiplierTarget.swift in Sources */,
+				CDCA10441E91174B00485435 /* ConstraintConfig.swift in Sources */,
+				CDCA10431E91174B00485435 /* ConstraintAttributes.swift in Sources */,
+				CDCA10451E91174B00485435 /* ConstraintConstantTarget.swift in Sources */,
+				CDCA10571E91174B00485435 /* ConstraintOffsetTarget.swift in Sources */,
+				CDCA105B1E91174B00485435 /* ConstraintView+Extensions.swift in Sources */,
+				CDCA10621E91174B00485435 /* UILayoutSupport+Extensions.swift in Sources */,
+				CDCA104C1E91174B00485435 /* ConstraintLayoutGuide.swift in Sources */,
+				CDCA10611E91174B00485435 /* LayoutConstraintItem.swift in Sources */,
+				CDCA10601E91174B00485435 /* LayoutConstraint.swift in Sources */,
+				CDCA10541E91174B00485435 /* ConstraintMakerPriortizable.swift in Sources */,
+				CDCA10581E91174B00485435 /* ConstraintPriorityTarget.swift in Sources */,
+				CDCA10421E91174B00485435 /* Constraint.swift in Sources */,
+				CDCA10501E91174B00485435 /* ConstraintMaker.swift in Sources */,
+				CDCA10491E91174B00485435 /* ConstraintInsetTarget.swift in Sources */,
+				CDCA105D1E91174B00485435 /* ConstraintViewDSL.swift in Sources */,
+				CDCA104E1E91174B00485435 /* ConstraintLayoutSupport.swift in Sources */,
+				CDCA10481E91174B00485435 /* ConstraintInsets.swift in Sources */,
+				CDCA10591E91174B00485435 /* ConstraintRelatableTarget.swift in Sources */,
+				CDCA104D1E91174B00485435 /* ConstraintLayoutGuideDSL.swift in Sources */,
+				CDCA10551E91174B00485435 /* ConstraintMakerRelatable.swift in Sources */,
+				CDCA10021E910A0F00485435 /* AppDelegate.swift in Sources */,
+				CDCA10471E91174B00485435 /* ConstraintDSL.swift in Sources */,
+				CDCA10461E91174B00485435 /* ConstraintDescription.swift in Sources */,
+				CDCA104B1E91174B00485435 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				CDCA105E1E91174B00485435 /* Debugging.swift in Sources */,
+				CDCA104A1E91174B00485435 /* ConstraintItem.swift in Sources */,
+				CDCA104F1E91174B00485435 /* ConstraintLayoutSupportDSL.swift in Sources */,
+				CDCA105C1E91174B00485435 /* ConstraintView.swift in Sources */,
+				CDCA10531E91174B00485435 /* ConstraintMakerFinalizable.swift in Sources */,
+				CDCA10511E91174B00485435 /* ConstraintMakerEditable.swift in Sources */,
+				CDCA105A1E91174B00485435 /* ConstraintRelation.swift in Sources */,
+				CDCA10521E91174B00485435 /* ConstraintMakerExtendable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CDCA100A1E910A1000485435 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDCA100B1E910A1000485435 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDCA100E1E910A1000485435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDCA100F1E910A1000485435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDCA10111E910A1000485435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2B2EC9A1BBFCC1EDB702D9 /* Pods-SinaWeibo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SinaWeibo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LockLightz-gmail.com.SinaWeibo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CDCA10121E910A1000485435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF7D130B3462326A8D397B8 /* Pods-SinaWeibo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SinaWeibo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LockLightz-gmail.com.SinaWeibo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDCA0FF91E910A0F00485435 /* Build configuration list for PBXProject "SinaWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDCA100E1E910A1000485435 /* Debug */,
+				CDCA100F1E910A1000485435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDCA10101E910A1000485435 /* Build configuration list for PBXNativeTarget "SinaWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDCA10111E910A1000485435 /* Debug */,
+				CDCA10121E910A1000485435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDCA0FF61E910A0F00485435 /* Project object */;
+}
