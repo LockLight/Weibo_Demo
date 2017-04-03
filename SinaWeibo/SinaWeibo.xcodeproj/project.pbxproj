@@ -44,6 +44,13 @@
 		CDCA10601E91174B00485435 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA103E1E91174B00485435 /* LayoutConstraint.swift */; };
 		CDCA10611E91174B00485435 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA103F1E91174B00485435 /* LayoutConstraintItem.swift */; };
 		CDCA10621E91174B00485435 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10411E91174B00485435 /* UILayoutSupport+Extensions.swift */; };
+		CDCA10641E911A1000485435 /* WBMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10631E911A1000485435 /* WBMainController.swift */; };
+		CDCA10661E911B0D00485435 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = CDCA10651E911B0D00485435 /* main.json */; };
+		CDCA10681E91293A00485435 /* WBRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10671E91293A00485435 /* WBRootController.swift */; };
+		CDCA106A1E9129B800485435 /* WBHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10691E9129B800485435 /* WBHomeController.swift */; };
+		CDCA106C1E9129CC00485435 /* WBDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106B1E9129CC00485435 /* WBDiscoverController.swift */; };
+		CDCA106E1E9129DB00485435 /* WBMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106D1E9129DB00485435 /* WBMessageController.swift */; };
+		CDCA10701E9129EB00485435 /* WBProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106F1E9129EB00485435 /* WBProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +96,13 @@
 		CDCA103F1E91174B00485435 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		CDCA10401E91174B00485435 /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
 		CDCA10411E91174B00485435 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		CDCA10631E911A1000485435 /* WBMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainController.swift; sourceTree = "<group>"; };
+		CDCA10651E911B0D00485435 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
+		CDCA10671E91293A00485435 /* WBRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBRootController.swift; sourceTree = "<group>"; };
+		CDCA10691E9129B800485435 /* WBHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WBHomeController.swift; path = ../Discover/WBHomeController.swift; sourceTree = "<group>"; };
+		CDCA106B1E9129CC00485435 /* WBDiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDiscoverController.swift; sourceTree = "<group>"; };
+		CDCA106D1E9129DB00485435 /* WBMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMessageController.swift; sourceTree = "<group>"; };
+		CDCA106F1E9129EB00485435 /* WBProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +195,7 @@
 		CDCA10161E91129B00485435 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				CDCA106B1E9129CC00485435 /* WBDiscoverController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -188,6 +203,7 @@
 		CDCA10171E91129B00485435 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CDCA10691E9129B800485435 /* WBHomeController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -195,6 +211,9 @@
 		CDCA10181E91129B00485435 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CDCA10651E911B0D00485435 /* main.json */,
+				CDCA10631E911A1000485435 /* WBMainController.swift */,
+				CDCA10671E91293A00485435 /* WBRootController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -202,6 +221,7 @@
 		CDCA10191E91129B00485435 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				CDCA106D1E9129DB00485435 /* WBMessageController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -209,6 +229,7 @@
 		CDCA101A1E91129B00485435 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CDCA106F1E9129EB00485435 /* WBProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -352,6 +373,7 @@
 			files = (
 				CDCA100C1E910A1000485435 /* LaunchScreen.storyboard in Resources */,
 				CDCA10091E910A1000485435 /* Assets.xcassets in Resources */,
+				CDCA10661E911B0D00485435 /* main.json in Resources */,
 				CDCA105F1E91174B00485435 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,12 +436,14 @@
 				CDCA10561E91174B00485435 /* ConstraintMultiplierTarget.swift in Sources */,
 				CDCA10441E91174B00485435 /* ConstraintConfig.swift in Sources */,
 				CDCA10431E91174B00485435 /* ConstraintAttributes.swift in Sources */,
+				CDCA10681E91293A00485435 /* WBRootController.swift in Sources */,
 				CDCA10451E91174B00485435 /* ConstraintConstantTarget.swift in Sources */,
 				CDCA10571E91174B00485435 /* ConstraintOffsetTarget.swift in Sources */,
 				CDCA105B1E91174B00485435 /* ConstraintView+Extensions.swift in Sources */,
 				CDCA10621E91174B00485435 /* UILayoutSupport+Extensions.swift in Sources */,
 				CDCA104C1E91174B00485435 /* ConstraintLayoutGuide.swift in Sources */,
 				CDCA10611E91174B00485435 /* LayoutConstraintItem.swift in Sources */,
+				CDCA10641E911A1000485435 /* WBMainController.swift in Sources */,
 				CDCA10601E91174B00485435 /* LayoutConstraint.swift in Sources */,
 				CDCA10541E91174B00485435 /* ConstraintMakerPriortizable.swift in Sources */,
 				CDCA10581E91174B00485435 /* ConstraintPriorityTarget.swift in Sources */,
@@ -436,13 +460,17 @@
 				CDCA10471E91174B00485435 /* ConstraintDSL.swift in Sources */,
 				CDCA10461E91174B00485435 /* ConstraintDescription.swift in Sources */,
 				CDCA104B1E91174B00485435 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				CDCA106A1E9129B800485435 /* WBHomeController.swift in Sources */,
+				CDCA10701E9129EB00485435 /* WBProfileViewController.swift in Sources */,
 				CDCA105E1E91174B00485435 /* Debugging.swift in Sources */,
 				CDCA104A1E91174B00485435 /* ConstraintItem.swift in Sources */,
 				CDCA104F1E91174B00485435 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				CDCA105C1E91174B00485435 /* ConstraintView.swift in Sources */,
+				CDCA106E1E9129DB00485435 /* WBMessageController.swift in Sources */,
 				CDCA10531E91174B00485435 /* ConstraintMakerFinalizable.swift in Sources */,
 				CDCA10511E91174B00485435 /* ConstraintMakerEditable.swift in Sources */,
 				CDCA105A1E91174B00485435 /* ConstraintRelation.swift in Sources */,
+				CDCA106C1E9129CC00485435 /* WBDiscoverController.swift in Sources */,
 				CDCA10521E91174B00485435 /* ConstraintMakerExtendable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
