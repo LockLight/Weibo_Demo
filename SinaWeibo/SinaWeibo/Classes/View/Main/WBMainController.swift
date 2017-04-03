@@ -17,6 +17,14 @@ class WBMainController: UITabBarController {
     }
 }
 
+
+// MARK: - 交互
+extension WBMainController{
+    func composeBtnClick(btn:UIButton){
+        print("发布微博")
+    }
+}
+
 // MARK: - 设置UI
 extension WBMainController{
     func setupUI (){
@@ -24,12 +32,22 @@ extension WBMainController{
         //添加子控制器
         addViewControllers()
         //添加发布按钮
-        
+        setComposeBtn()
+        //设置tabbar底边的阴影线条
+        setShadowImage()
     }
-    func setComposeBtn(){
-        let btn =
+    func setShadowImage(){
+        tabBar.backgroundImage = UIImage(named:"tabbar_background")
+        tabBar.shadowImage = UIImage.pureImage(color: UIColor(white: 0.9, alpha: 0.9))
     }
     
+    func setComposeBtn(){
+        let btn = UIButton(title: nil,image: "tabbar_compose_icon_add", bgImage: "tabbar_compose_button", target: self, action:#selector(composeBtnClick(btn:)))
+        
+        let width = tabBar.bounds.width * 2/5
+        btn.frame = tabBar.bounds.insetBy(dx: width-2 , dy: 6)
+        tabBar.addSubview(btn)
+    }
     
     //添加子控制器
     func addViewControllers (){
@@ -70,9 +88,12 @@ extension WBMainController{
                     
                     controller.tabBarItem.image = image
                     controller.tabBarItem.selectedImage = selectedImage
-                
-                    print(controller)
+                    
+                    
+                    //访客视图的文本和图标信息赋值给controller
+                    controller.visitorInfo = dict["visitorInfo"] as? [String:Any]
                 }
+//                使用子控制器创建navigationController
                 let nav = UINavigationController(rootViewController: controller)
                 return nav
             }

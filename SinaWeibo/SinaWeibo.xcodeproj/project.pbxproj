@@ -13,6 +13,7 @@
 		CDBB3AD61E91EEFE00DDE29A /* UIImage+draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3AD11E91EEFE00DDE29A /* UIImage+draw.swift */; };
 		CDBB3AD71E91EEFE00DDE29A /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3AD21E91EEFE00DDE29A /* UIImageView+extension.swift */; };
 		CDBB3AD81E91EEFE00DDE29A /* UILable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3AD31E91EEFE00DDE29A /* UILable+extension.swift */; };
+		CDBB3ADB1E91FA9700DDE29A /* WBVisitorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3ADA1E91FA9700DDE29A /* WBVisitorController.swift */; };
 		CDCA10021E910A0F00485435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10011E910A0F00485435 /* AppDelegate.swift */; };
 		CDCA10091E910A1000485435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCA10081E910A1000485435 /* Assets.xcassets */; };
 		CDCA100C1E910A1000485435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCA100A1E910A1000485435 /* LaunchScreen.storyboard */; };
@@ -67,6 +68,7 @@
 		CDBB3AD11E91EEFE00DDE29A /* UIImage+draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+draw.swift"; sourceTree = "<group>"; };
 		CDBB3AD21E91EEFE00DDE29A /* UIImageView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
 		CDBB3AD31E91EEFE00DDE29A /* UILable+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILable+extension.swift"; sourceTree = "<group>"; };
+		CDBB3ADA1E91FA9700DDE29A /* WBVisitorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorController.swift; sourceTree = "<group>"; };
 		CDCA0FFE1E910A0F00485435 /* SinaWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCA10011E910A0F00485435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDCA10081E910A1000485435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +146,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CDBB3AD91E91FA0F00DDE29A /* VisitorView(访客视图) */ = {
+			isa = PBXGroup;
+			children = (
+				CDBB3ADA1E91FA9700DDE29A /* WBVisitorController.swift */,
+			);
+			path = "VisitorView(访客视图)";
+			sourceTree = "<group>";
+		};
 		CDCA0FF51E910A0F00485435 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +203,7 @@
 		CDCA10151E91129B00485435 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CDBB3AD91E91FA0F00DDE29A /* VisitorView(访客视图) */,
 				CDCA10161E91129B00485435 /* Discover */,
 				CDCA10171E91129B00485435 /* Home */,
 				CDCA10181E91129B00485435 /* Main */,
@@ -471,6 +482,7 @@
 				CDCA10491E91174B00485435 /* ConstraintInsetTarget.swift in Sources */,
 				CDCA105D1E91174B00485435 /* ConstraintViewDSL.swift in Sources */,
 				CDCA104E1E91174B00485435 /* ConstraintLayoutSupport.swift in Sources */,
+				CDBB3ADB1E91FA9700DDE29A /* WBVisitorController.swift in Sources */,
 				CDCA10481E91174B00485435 /* ConstraintInsets.swift in Sources */,
 				CDCA10591E91174B00485435 /* ConstraintRelatableTarget.swift in Sources */,
 				CDCA104D1E91174B00485435 /* ConstraintLayoutGuideDSL.swift in Sources */,
