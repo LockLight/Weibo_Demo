@@ -27,7 +27,7 @@ extension WBMainController{
         
     }
     func setComposeBtn(){
-        let btn = UIButton()
+        let btn =
     }
     
     

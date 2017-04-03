@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		716DF24E067E44A03AAAEE91 /* Pods_SinaWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */; };
+		CDBB3AD41E91EEFE00DDE29A /* UIButton+convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3ACF1E91EEFE00DDE29A /* UIButton+convenience.swift */; };
+		CDBB3AD51E91EEFE00DDE29A /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3AD01E91EEFE00DDE29A /* UIColor+extension.swift */; };
+		CDBB3AD61E91EEFE00DDE29A /* UIImage+draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3AD11E91EEFE00DDE29A /* UIImage+draw.swift */; };
+		CDBB3AD71E91EEFE00DDE29A /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3AD21E91EEFE00DDE29A /* UIImageView+extension.swift */; };
+		CDBB3AD81E91EEFE00DDE29A /* UILable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3AD31E91EEFE00DDE29A /* UILable+extension.swift */; };
 		CDCA10021E910A0F00485435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10011E910A0F00485435 /* AppDelegate.swift */; };
 		CDCA10091E910A1000485435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCA10081E910A1000485435 /* Assets.xcassets */; };
 		CDCA100C1E910A1000485435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCA100A1E910A1000485435 /* LaunchScreen.storyboard */; };
@@ -57,6 +62,11 @@
 		02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinaWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2B2EC9A1BBFCC1EDB702D9 /* Pods-SinaWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 		6AF7D130B3462326A8D397B8 /* Pods-SinaWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.release.xcconfig"; sourceTree = "<group>"; };
+		CDBB3ACF1E91EEFE00DDE29A /* UIButton+convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+convenience.swift"; sourceTree = "<group>"; };
+		CDBB3AD01E91EEFE00DDE29A /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		CDBB3AD11E91EEFE00DDE29A /* UIImage+draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+draw.swift"; sourceTree = "<group>"; };
+		CDBB3AD21E91EEFE00DDE29A /* UIImageView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		CDBB3AD31E91EEFE00DDE29A /* UILable+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILable+extension.swift"; sourceTree = "<group>"; };
 		CDCA0FFE1E910A0F00485435 /* SinaWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCA10011E910A0F00485435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDCA10081E910A1000485435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -252,6 +262,11 @@
 		CDCA101D1E91129B00485435 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				CDBB3ACF1E91EEFE00DDE29A /* UIButton+convenience.swift */,
+				CDBB3AD01E91EEFE00DDE29A /* UIColor+extension.swift */,
+				CDBB3AD11E91EEFE00DDE29A /* UIImage+draw.swift */,
+				CDBB3AD21E91EEFE00DDE29A /* UIImageView+extension.swift */,
+				CDBB3AD31E91EEFE00DDE29A /* UILable+extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -440,14 +455,18 @@
 				CDCA10451E91174B00485435 /* ConstraintConstantTarget.swift in Sources */,
 				CDCA10571E91174B00485435 /* ConstraintOffsetTarget.swift in Sources */,
 				CDCA105B1E91174B00485435 /* ConstraintView+Extensions.swift in Sources */,
+				CDBB3AD41E91EEFE00DDE29A /* UIButton+convenience.swift in Sources */,
 				CDCA10621E91174B00485435 /* UILayoutSupport+Extensions.swift in Sources */,
 				CDCA104C1E91174B00485435 /* ConstraintLayoutGuide.swift in Sources */,
 				CDCA10611E91174B00485435 /* LayoutConstraintItem.swift in Sources */,
+				CDBB3AD61E91EEFE00DDE29A /* UIImage+draw.swift in Sources */,
+				CDBB3AD81E91EEFE00DDE29A /* UILable+extension.swift in Sources */,
 				CDCA10641E911A1000485435 /* WBMainController.swift in Sources */,
 				CDCA10601E91174B00485435 /* LayoutConstraint.swift in Sources */,
 				CDCA10541E91174B00485435 /* ConstraintMakerPriortizable.swift in Sources */,
 				CDCA10581E91174B00485435 /* ConstraintPriorityTarget.swift in Sources */,
 				CDCA10421E91174B00485435 /* Constraint.swift in Sources */,
+				CDBB3AD71E91EEFE00DDE29A /* UIImageView+extension.swift in Sources */,
 				CDCA10501E91174B00485435 /* ConstraintMaker.swift in Sources */,
 				CDCA10491E91174B00485435 /* ConstraintInsetTarget.swift in Sources */,
 				CDCA105D1E91174B00485435 /* ConstraintViewDSL.swift in Sources */,
@@ -466,6 +485,7 @@
 				CDCA104A1E91174B00485435 /* ConstraintItem.swift in Sources */,
 				CDCA104F1E91174B00485435 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				CDCA105C1E91174B00485435 /* ConstraintView.swift in Sources */,
+				CDBB3AD51E91EEFE00DDE29A /* UIColor+extension.swift in Sources */,
 				CDCA106E1E9129DB00485435 /* WBMessageController.swift in Sources */,
 				CDCA10531E91174B00485435 /* ConstraintMakerFinalizable.swift in Sources */,
 				CDCA10511E91174B00485435 /* ConstraintMakerEditable.swift in Sources */,
