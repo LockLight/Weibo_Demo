@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol WBVisitorControllerDelegate:NSObjectProtocol {
+    func login()
+}
+
 class WBVisitorController: UIView {
-    
+    //登录按钮代理
+    weak var delegate:WBVisitorControllerDelegate?
     
     //图标
     lazy var iconImageView:UIImageView = UIImageView(imageName: "visitordiscover_feed_image_house")
@@ -27,9 +32,15 @@ class WBVisitorController: UIView {
     
     //图标与label的字典
     var visitorInfo:[String:Any]?{
-        didSet{
+        didSet {
             iconImageView.image = UIImage(named: visitorInfo?["imageName"] as! String)
             titleLabel.text = visitorInfo?["message"] as? String
+            
+            if let _ = visitorInfo?["isAnimation"] as? Bool {
+                circleImageView.isHidden = false
+            } else {
+                circleImageView.isHidden = true
+            }
         }
     }
     
@@ -51,6 +62,7 @@ class WBVisitorController: UIView {
 extension WBVisitorController{
     func btnClick(){
         print("hello world")
+        delegate?.login()
     }
 }
 
@@ -109,10 +121,11 @@ extension WBVisitorController{
     
     //转动图标动画
     func addAnimation(){
-        let animation = CABasicAnimation(keyPath: "trasnform:rotation")
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
         animation.toValue = 2 * M_PI
         animation.duration = 7
         animation.repeatCount = MAXFLOAT
+        //保持动画状态,当页面跳转后
         animation.isRemovedOnCompletion = false
         
         circleImageView.layer.add(animation, forKey: nil)
