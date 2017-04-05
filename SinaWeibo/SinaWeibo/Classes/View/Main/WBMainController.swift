@@ -40,11 +40,11 @@ extension WBMainController{
     }
     
     func setNewfeatureOrWelcomeView(){
-        let isNewfeatrue = Bundle.main.isNewFeatrue
+//        let isNewfeatrue = Bundle.main.isNewFeatrue
+        let isNewfeatrue = true
         if(WBUserAccount.shared.isLogin == true){
             if isNewfeatrue == true{
                 let newFeature = WBNewFeatureView()
-                newFeature.backgroundColor = UIColor.yellow
                 view.addSubview(newFeature)
             }else{
                 let welcomeView = WBWelcomeView()

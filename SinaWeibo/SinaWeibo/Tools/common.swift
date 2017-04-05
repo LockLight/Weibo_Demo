@@ -17,7 +17,7 @@ let wbPassword = "purel@3.21weibo"
 
 //MARK: - 和rect相关
 let screenBounds = UIScreen.main.bounds
-let screenWidh = screenBounds.width
+let screenWidth = screenBounds.width
 let screenHeight = screenBounds.height
 let screenScale = UIScreen.main.scale //缩放比例
 
