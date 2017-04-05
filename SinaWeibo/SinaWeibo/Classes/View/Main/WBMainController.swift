@@ -35,7 +35,25 @@ extension WBMainController{
         setComposeBtn()
         //设置tabbar底边的阴影线条
         setShadowImage()
+        //设置新特性页面和欢迎页
+        setNewfeatureOrWelcomeView()
     }
+    
+    func setNewfeatureOrWelcomeView(){
+        let isNewfeatrue = Bundle.main.isNewFeatrue
+        if(WBUserAccount.shared.isLogin == true){
+            if isNewfeatrue == true{
+                let newFeature = WBNewFeatureView()
+                newFeature.backgroundColor = UIColor.yellow
+                view.addSubview(newFeature)
+            }else{
+                let welcomeView = WBWelcomeView()
+                welcomeView.backgroundColor = UIColor.green
+                view.addSubview(welcomeView)
+            }
+        }
+    }
+    
     func setShadowImage(){
         tabBar.backgroundImage = UIImage(named:"tabbar_background")
         tabBar.shadowImage = UIImage.pureImage(color: UIColor(white: 0.9, alpha: 0.9))

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		716DF24E067E44A03AAAEE91 /* Pods_SinaWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */; };
+		CD9E687F1E950039008D62DC /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E687E1E950039008D62DC /* WBNewFeatureView.swift */; };
+		CD9E68811E950049008D62DC /* WBWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68801E950049008D62DC /* WBWelcomeView.swift */; };
+		CD9E68831E95054A008D62DC /* Bundle+JudgeVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68821E95054A008D62DC /* Bundle+JudgeVersion.swift */; };
 		CDB53BD91E93EF2C005A0E80 /* WBLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BD81E93EF2C005A0E80 /* WBLoginController.swift */; };
 		CDB53BDB1E93F3D8005A0E80 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BDA1E93F3D8005A0E80 /* common.swift */; };
 		CDB53BDE1E93F68E005A0E80 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BDD1E93F68E005A0E80 /* NetworkTool.swift */; };
@@ -68,6 +71,9 @@
 		02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinaWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2B2EC9A1BBFCC1EDB702D9 /* Pods-SinaWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 		6AF7D130B3462326A8D397B8 /* Pods-SinaWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.release.xcconfig"; sourceTree = "<group>"; };
+		CD9E687E1E950039008D62DC /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
+		CD9E68801E950049008D62DC /* WBWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBWelcomeView.swift; sourceTree = "<group>"; };
+		CD9E68821E95054A008D62DC /* Bundle+JudgeVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+JudgeVersion.swift"; sourceTree = "<group>"; };
 		CDB53BD81E93EF2C005A0E80 /* WBLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLoginController.swift; sourceTree = "<group>"; };
 		CDB53BDA1E93F3D8005A0E80 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		CDB53BDD1E93F68E005A0E80 /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
@@ -156,6 +162,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD9E687D1E95001B008D62DC /* NewFeature(新特性与欢迎页) */ = {
+			isa = PBXGroup;
+			children = (
+				CD9E687E1E950039008D62DC /* WBNewFeatureView.swift */,
+				CD9E68801E950049008D62DC /* WBWelcomeView.swift */,
+			);
+			path = "NewFeature(新特性与欢迎页)";
+			sourceTree = "<group>";
+		};
 		CDB53BD71E93EF00005A0E80 /* Login(登录页面) */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +246,7 @@
 		CDCA10151E91129B00485435 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CD9E687D1E95001B008D62DC /* NewFeature(新特性与欢迎页) */,
 				CDB53BD71E93EF00005A0E80 /* Login(登录页面) */,
 				CDBB3AD91E91FA0F00DDE29A /* VisitorView(访客视图) */,
 				CDCA10161E91129B00485435 /* Discover */,
@@ -309,6 +325,7 @@
 				CDBB3AD21E91EEFE00DDE29A /* UIImageView+extension.swift */,
 				CDBB3AD31E91EEFE00DDE29A /* UILable+extension.swift */,
 				CDB53BDA1E93F3D8005A0E80 /* common.swift */,
+				CD9E68821E95054A008D62DC /* Bundle+JudgeVersion.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -520,11 +537,13 @@
 				CDCA10481E91174B00485435 /* ConstraintInsets.swift in Sources */,
 				CDCA10591E91174B00485435 /* ConstraintRelatableTarget.swift in Sources */,
 				CDCA104D1E91174B00485435 /* ConstraintLayoutGuideDSL.swift in Sources */,
+				CD9E687F1E950039008D62DC /* WBNewFeatureView.swift in Sources */,
 				CDCA10551E91174B00485435 /* ConstraintMakerRelatable.swift in Sources */,
 				CDCA10021E910A0F00485435 /* AppDelegate.swift in Sources */,
 				CDCA10471E91174B00485435 /* ConstraintDSL.swift in Sources */,
 				CDCA10461E91174B00485435 /* ConstraintDescription.swift in Sources */,
 				CDCA104B1E91174B00485435 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				CD9E68831E95054A008D62DC /* Bundle+JudgeVersion.swift in Sources */,
 				CDCA106A1E9129B800485435 /* WBHomeController.swift in Sources */,
 				CDCA10701E9129EB00485435 /* WBProfileViewController.swift in Sources */,
 				CDCA105E1E91174B00485435 /* Debugging.swift in Sources */,
@@ -539,6 +558,7 @@
 				CDCA105A1E91174B00485435 /* ConstraintRelation.swift in Sources */,
 				CDB53BE01E93F6F5005A0E80 /* NetworkTool+Login.swift in Sources */,
 				CDCA106C1E9129CC00485435 /* WBDiscoverController.swift in Sources */,
+				CD9E68811E950049008D62DC /* WBWelcomeView.swift in Sources */,
 				CDCA10521E91174B00485435 /* ConstraintMakerExtendable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -57,7 +57,6 @@ extension WBRootController {
     }
 }
 
-
 //MARK: - 访客视图的代理方法
 extension WBRootController:WBVisitorControllerDelegate{
     func login() {
