@@ -23,3 +23,7 @@ let screenScale = UIScreen.main.scale //缩放比例
 
 //MARK: - UI相关
 let globalColor: UIColor = UIColor.orange
+
+
+//MARK: - 全局通知
+let loginSuccessNotification = Notification.Name(rawValue: "loginSuccessNotification")

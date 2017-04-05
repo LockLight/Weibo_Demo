@@ -18,7 +18,6 @@ class WBLoginController: WBRootController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.backgroundColor = UIColor.yellow
         //加载数据
         loadLoginPage()
@@ -75,6 +74,10 @@ extension WBLoginController: UIWebViewDelegate {
                                 }
                                 //保存用户信息
                                 WBUserAccount.shared.save(dict: userDic)
+                                
+                                //登录成功后发通知
+                                NotificationCenter.default.post(Notification(name:loginSuccessNotification))
+                                
                                 self.dismiss()
                             } else {
                                 //没有成功获取到user信息
