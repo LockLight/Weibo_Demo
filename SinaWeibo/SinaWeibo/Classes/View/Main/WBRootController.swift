@@ -7,9 +7,25 @@
 //
 
 import UIKit
+import MJRefresh
+
+fileprivate let identifier = "identifer"
 
 class WBRootController: UIViewController {
+    //下拉刷新控件
+    lazy var refreshHeader:MJRefreshNormalHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadData))
+    //上拉刷新控件
+    lazy var refreshFooter:MJRefreshAutoNormalFooter = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadData))
     
+    
+    /// tableViw
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        return tableView
+    }()
+
     var visitorView: WBVisitorController?
     
     //访客的图片和label 字典
@@ -25,6 +41,9 @@ class WBRootController: UIViewController {
         
         setupUI()
         
+        self.tableView.mj_header = refreshHeader
+        self.tableView.mj_footer = refreshFooter
+        
         //接收通知
         NotificationCenter.default.addObserver(self, selector: #selector(loginSuccess), name: loginSuccessNotification, object: nil)
     }
@@ -37,14 +56,28 @@ extension WBRootController{
         visitorView?.removeFromSuperview()
         visitorView = nil
     }
+    
+    func loadData(){
+        print("hello,world")
+    }
 }
 
 
 //MARK: - 设置UI
 extension WBRootController {
     func setupUI() {
+        setupTableView()
         setVisitorView()
-        
+    }
+    
+    /// 设置tableView
+    func setupTableView() {
+        self.view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.left.right.equalTo(self.view)
+            make.top.equalTo(self.view).offset(64)
+            make.bottom.equalTo(self.view)
+        }
     }
     
     func setVisitorView(){
@@ -63,6 +96,17 @@ extension WBRootController:WBVisitorControllerDelegate{
         let loginController = WBLoginController()
         let loginNav = UINavigationController(rootViewController: loginController)
         present(loginNav, animated: true, completion: nil)
+    }
+}
+
+//MARK: - tableView的数据源
+extension WBRootController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
 }
 

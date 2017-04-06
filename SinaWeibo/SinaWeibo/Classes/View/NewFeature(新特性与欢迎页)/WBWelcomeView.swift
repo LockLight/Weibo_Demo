@@ -75,9 +75,4 @@ extension WBWelcomeView{
             self.removeFromSuperview()
         }
     }
-
-    
-    
-    
-    
 }

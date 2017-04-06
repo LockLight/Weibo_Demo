@@ -11,6 +11,10 @@
 		CD9E687F1E950039008D62DC /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E687E1E950039008D62DC /* WBNewFeatureView.swift */; };
 		CD9E68811E950049008D62DC /* WBWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68801E950049008D62DC /* WBWelcomeView.swift */; };
 		CD9E68831E95054A008D62DC /* Bundle+JudgeVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68821E95054A008D62DC /* Bundle+JudgeVersion.swift */; };
+		CD9E68851E951E92008D62DC /* WBUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68841E951E92008D62DC /* WBUserModel.swift */; };
+		CD9E68871E951EAA008D62DC /* WBStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68861E951EAA008D62DC /* WBStatusModel.swift */; };
+		CD9E68891E951ECA008D62DC /* WBPictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68881E951ECA008D62DC /* WBPictureModel.swift */; };
+		CD9E688B1E95227D008D62DC /* NetworkTool+status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E688A1E95227D008D62DC /* NetworkTool+status.swift */; };
 		CDB53BD91E93EF2C005A0E80 /* WBLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BD81E93EF2C005A0E80 /* WBLoginController.swift */; };
 		CDB53BDB1E93F3D8005A0E80 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BDA1E93F3D8005A0E80 /* common.swift */; };
 		CDB53BDE1E93F68E005A0E80 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BDD1E93F68E005A0E80 /* NetworkTool.swift */; };
@@ -64,7 +68,7 @@
 		CDCA106A1E9129B800485435 /* WBHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA10691E9129B800485435 /* WBHomeController.swift */; };
 		CDCA106C1E9129CC00485435 /* WBDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106B1E9129CC00485435 /* WBDiscoverController.swift */; };
 		CDCA106E1E9129DB00485435 /* WBMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106D1E9129DB00485435 /* WBMessageController.swift */; };
-		CDCA10701E9129EB00485435 /* WBProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106F1E9129EB00485435 /* WBProfileViewController.swift */; };
+		CDCA10701E9129EB00485435 /* WBProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106F1E9129EB00485435 /* WBProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +78,10 @@
 		CD9E687E1E950039008D62DC /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
 		CD9E68801E950049008D62DC /* WBWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBWelcomeView.swift; sourceTree = "<group>"; };
 		CD9E68821E95054A008D62DC /* Bundle+JudgeVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+JudgeVersion.swift"; sourceTree = "<group>"; };
+		CD9E68841E951E92008D62DC /* WBUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserModel.swift; sourceTree = "<group>"; };
+		CD9E68861E951EAA008D62DC /* WBStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusModel.swift; sourceTree = "<group>"; };
+		CD9E68881E951ECA008D62DC /* WBPictureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPictureModel.swift; sourceTree = "<group>"; };
+		CD9E688A1E95227D008D62DC /* NetworkTool+status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkTool+status.swift"; sourceTree = "<group>"; };
 		CDB53BD81E93EF2C005A0E80 /* WBLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLoginController.swift; sourceTree = "<group>"; };
 		CDB53BDA1E93F3D8005A0E80 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		CDB53BDD1E93F68E005A0E80 /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
@@ -130,7 +138,7 @@
 		CDCA10691E9129B800485435 /* WBHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WBHomeController.swift; path = ../Discover/WBHomeController.swift; sourceTree = "<group>"; };
 		CDCA106B1E9129CC00485435 /* WBDiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDiscoverController.swift; sourceTree = "<group>"; };
 		CDCA106D1E9129DB00485435 /* WBMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMessageController.swift; sourceTree = "<group>"; };
-		CDCA106F1E9129EB00485435 /* WBProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProfileViewController.swift; sourceTree = "<group>"; };
+		CDCA106F1E9129EB00485435 /* WBProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +192,7 @@
 			children = (
 				CDB53BDD1E93F68E005A0E80 /* NetworkTool.swift */,
 				CDB53BDF1E93F6F5005A0E80 /* NetworkTool+Login.swift */,
+				CD9E688A1E95227D008D62DC /* NetworkTool+status.swift */,
 			);
 			path = NetworkTools;
 			sourceTree = "<group>";
@@ -239,6 +248,9 @@
 			isa = PBXGroup;
 			children = (
 				CDB53BE11E93F77B005A0E80 /* WBUserAccount.swift */,
+				CD9E68841E951E92008D62DC /* WBUserModel.swift */,
+				CD9E68861E951EAA008D62DC /* WBStatusModel.swift */,
+				CD9E68881E951ECA008D62DC /* WBPictureModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,7 +307,7 @@
 		CDCA101A1E91129B00485435 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CDCA106F1E9129EB00485435 /* WBProfileViewController.swift */,
+				CDCA106F1E9129EB00485435 /* WBProfileController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -524,6 +536,7 @@
 				CDBB3AD61E91EEFE00DDE29A /* UIImage+draw.swift in Sources */,
 				CDBB3AD81E91EEFE00DDE29A /* UILable+extension.swift in Sources */,
 				CDCA10641E911A1000485435 /* WBMainController.swift in Sources */,
+				CD9E68851E951E92008D62DC /* WBUserModel.swift in Sources */,
 				CDCA10601E91174B00485435 /* LayoutConstraint.swift in Sources */,
 				CDCA10541E91174B00485435 /* ConstraintMakerPriortizable.swift in Sources */,
 				CDCA10581E91174B00485435 /* ConstraintPriorityTarget.swift in Sources */,
@@ -545,13 +558,16 @@
 				CDCA104B1E91174B00485435 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				CD9E68831E95054A008D62DC /* Bundle+JudgeVersion.swift in Sources */,
 				CDCA106A1E9129B800485435 /* WBHomeController.swift in Sources */,
-				CDCA10701E9129EB00485435 /* WBProfileViewController.swift in Sources */,
+				CDCA10701E9129EB00485435 /* WBProfileController.swift in Sources */,
+				CD9E68871E951EAA008D62DC /* WBStatusModel.swift in Sources */,
 				CDCA105E1E91174B00485435 /* Debugging.swift in Sources */,
 				CDCA104A1E91174B00485435 /* ConstraintItem.swift in Sources */,
 				CDB53BE21E93F77B005A0E80 /* WBUserAccount.swift in Sources */,
 				CDCA104F1E91174B00485435 /* ConstraintLayoutSupportDSL.swift in Sources */,
+				CD9E68891E951ECA008D62DC /* WBPictureModel.swift in Sources */,
 				CDCA105C1E91174B00485435 /* ConstraintView.swift in Sources */,
 				CDBB3AD51E91EEFE00DDE29A /* UIColor+extension.swift in Sources */,
+				CD9E688B1E95227D008D62DC /* NetworkTool+status.swift in Sources */,
 				CDCA106E1E9129DB00485435 /* WBMessageController.swift in Sources */,
 				CDCA10531E91174B00485435 /* ConstraintMakerFinalizable.swift in Sources */,
 				CDCA10511E91174B00485435 /* ConstraintMakerEditable.swift in Sources */,
