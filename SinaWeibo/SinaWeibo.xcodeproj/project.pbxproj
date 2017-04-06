@@ -15,6 +15,11 @@
 		CD9E68871E951EAA008D62DC /* WBStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68861E951EAA008D62DC /* WBStatusModel.swift */; };
 		CD9E68891E951ECA008D62DC /* WBPictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68881E951ECA008D62DC /* WBPictureModel.swift */; };
 		CD9E688B1E95227D008D62DC /* NetworkTool+status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E688A1E95227D008D62DC /* NetworkTool+status.swift */; };
+		CDB417601E95F0EE00DFCC1C /* WBStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4175F1E95F0EE00DFCC1C /* WBStatusCell.swift */; };
+		CDB417621E95F11F00DFCC1C /* WBOriginalStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417611E95F11F00DFCC1C /* WBOriginalStatusView.swift */; };
+		CDB417641E95F18200DFCC1C /* WBRetweetedStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417631E95F18200DFCC1C /* WBRetweetedStatusView.swift */; };
+		CDB417661E95F19700DFCC1C /* WBStatusPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417651E95F19700DFCC1C /* WBStatusPictureView.swift */; };
+		CDB417681E95F1A900DFCC1C /* WBStatusToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417671E95F1A900DFCC1C /* WBStatusToolBar.swift */; };
 		CDB53BD91E93EF2C005A0E80 /* WBLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BD81E93EF2C005A0E80 /* WBLoginController.swift */; };
 		CDB53BDB1E93F3D8005A0E80 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BDA1E93F3D8005A0E80 /* common.swift */; };
 		CDB53BDE1E93F68E005A0E80 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BDD1E93F68E005A0E80 /* NetworkTool.swift */; };
@@ -82,6 +87,11 @@
 		CD9E68861E951EAA008D62DC /* WBStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusModel.swift; sourceTree = "<group>"; };
 		CD9E68881E951ECA008D62DC /* WBPictureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPictureModel.swift; sourceTree = "<group>"; };
 		CD9E688A1E95227D008D62DC /* NetworkTool+status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkTool+status.swift"; sourceTree = "<group>"; };
+		CDB4175F1E95F0EE00DFCC1C /* WBStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCell.swift; sourceTree = "<group>"; };
+		CDB417611E95F11F00DFCC1C /* WBOriginalStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBOriginalStatusView.swift; sourceTree = "<group>"; };
+		CDB417631E95F18200DFCC1C /* WBRetweetedStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBRetweetedStatusView.swift; sourceTree = "<group>"; };
+		CDB417651E95F19700DFCC1C /* WBStatusPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusPictureView.swift; sourceTree = "<group>"; };
+		CDB417671E95F1A900DFCC1C /* WBStatusToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusToolBar.swift; sourceTree = "<group>"; };
 		CDB53BD81E93EF2C005A0E80 /* WBLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLoginController.swift; sourceTree = "<group>"; };
 		CDB53BDA1E93F3D8005A0E80 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		CDB53BDD1E93F68E005A0E80 /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
@@ -177,6 +187,18 @@
 				CD9E68801E950049008D62DC /* WBWelcomeView.swift */,
 			);
 			path = "NewFeature(新特性与欢迎页)";
+			sourceTree = "<group>";
+		};
+		CDB4175E1E95F0D100DFCC1C /* StatusCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDB4175F1E95F0EE00DFCC1C /* WBStatusCell.swift */,
+				CDB417611E95F11F00DFCC1C /* WBOriginalStatusView.swift */,
+				CDB417631E95F18200DFCC1C /* WBRetweetedStatusView.swift */,
+				CDB417651E95F19700DFCC1C /* WBStatusPictureView.swift */,
+				CDB417671E95F1A900DFCC1C /* WBStatusToolBar.swift */,
+			);
+			path = StatusCell;
 			sourceTree = "<group>";
 		};
 		CDB53BD71E93EF00005A0E80 /* Login(登录页面) */ = {
@@ -281,6 +303,7 @@
 		CDCA10171E91129B00485435 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CDB4175E1E95F0D100DFCC1C /* StatusCell */,
 				CDCA10691E9129B800485435 /* WBHomeController.swift */,
 			);
 			path = Home;
@@ -430,6 +453,7 @@
 				TargetAttributes = {
 					CDCA0FFD1E910A0F00485435 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BV8SCCJTGN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -541,6 +565,8 @@
 				CDCA10541E91174B00485435 /* ConstraintMakerPriortizable.swift in Sources */,
 				CDCA10581E91174B00485435 /* ConstraintPriorityTarget.swift in Sources */,
 				CDCA10421E91174B00485435 /* Constraint.swift in Sources */,
+				CDB417621E95F11F00DFCC1C /* WBOriginalStatusView.swift in Sources */,
+				CDB417641E95F18200DFCC1C /* WBRetweetedStatusView.swift in Sources */,
 				CDBB3AD71E91EEFE00DDE29A /* UIImageView+extension.swift in Sources */,
 				CDCA10501E91174B00485435 /* ConstraintMaker.swift in Sources */,
 				CDCA10491E91174B00485435 /* ConstraintInsetTarget.swift in Sources */,
@@ -558,11 +584,14 @@
 				CDCA104B1E91174B00485435 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				CD9E68831E95054A008D62DC /* Bundle+JudgeVersion.swift in Sources */,
 				CDCA106A1E9129B800485435 /* WBHomeController.swift in Sources */,
+				CDB417661E95F19700DFCC1C /* WBStatusPictureView.swift in Sources */,
 				CDCA10701E9129EB00485435 /* WBProfileController.swift in Sources */,
 				CD9E68871E951EAA008D62DC /* WBStatusModel.swift in Sources */,
 				CDCA105E1E91174B00485435 /* Debugging.swift in Sources */,
 				CDCA104A1E91174B00485435 /* ConstraintItem.swift in Sources */,
 				CDB53BE21E93F77B005A0E80 /* WBUserAccount.swift in Sources */,
+				CDB417601E95F0EE00DFCC1C /* WBStatusCell.swift in Sources */,
+				CDB417681E95F1A900DFCC1C /* WBStatusToolBar.swift in Sources */,
 				CDCA104F1E91174B00485435 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				CD9E68891E951ECA008D62DC /* WBPictureModel.swift in Sources */,
 				CDCA105C1E91174B00485435 /* ConstraintView.swift in Sources */,
@@ -689,7 +718,7 @@
 			baseConfigurationReference = 5B2B2EC9A1BBFCC1EDB702D9 /* Pods-SinaWeibo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BV8SCCJTGN;
 				INFOPLIST_FILE = SinaWeibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
@@ -704,7 +733,7 @@
 			baseConfigurationReference = 6AF7D130B3462326A8D397B8 /* Pods-SinaWeibo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BV8SCCJTGN;
 				INFOPLIST_FILE = SinaWeibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
