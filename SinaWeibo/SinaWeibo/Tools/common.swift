@@ -27,3 +27,19 @@ let globalColor: UIColor = UIColor.orange
 
 //MARK: - 全局通知
 let loginSuccessNotification = Notification.Name(rawValue: "loginSuccessNotification")
+
+//MARK: - 在微博模块中的一些常量的封装
+struct WBStatusStruct {
+    let iconSize: CGSize = CGSize(width: 35, height: 35)
+    let margin: CGFloat = 10
+    let vipSize: CGSize = CGSize(width: 15, height: 15)
+    
+    let imageHeight = (screenWidth - 4 * 10)/3
+    var imageSize = CGSize.zero
+    
+    init() {
+        imageSize = CGSize(width: imageHeight, height: imageHeight)
+    }
+}
+
+let wbStatusStruct = WBStatusStruct()
