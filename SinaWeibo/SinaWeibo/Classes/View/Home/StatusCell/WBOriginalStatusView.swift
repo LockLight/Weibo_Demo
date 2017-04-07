@@ -9,6 +9,19 @@
 import UIKit
 
 class WBOriginalStatusView: UIView {
+    //微博数据的模型
+    var statusViewModel:WBStatusViewModel?{
+        didSet{
+            let url = URL(string: (statusViewModel?.statusModel.user?.avatar_large)!)
+            userIcon.sd_setImage(with: url!, placeholderImage: UIImage.init(named: "avatar_default_big"))
+            userNameLabel.text = statusViewModel?.statusModel.user?.screen_name
+            statusLabel.text = statusViewModel?.statusModel.text
+            sourceLabel.text = statusViewModel?.sourceStr
+            vipIcon.image = statusViewModel?.vipIcon
+            levelIcon.image = statusViewModel?.levelIcon
+        }
+    }
+    
     //用户头像
     lazy var userIcon:UIImageView = UIImageView(imageName: "avatar_default_big")
     //用户的VIP图标
@@ -23,7 +36,6 @@ class WBOriginalStatusView: UIView {
     lazy var timeLabel:UILabel = UILabel(title: "两小时前")
     //微博征文的label
     lazy var statusLabel:UILabel = UILabel(title: "地雷哥回基地就狂吐了好几回，我闻着都要吐了[笑cry]今天其实在现场的感觉挺感动的，在当初很恶劣的电竞环境坚持下来的，现在回忆起当年，这几个哥们记忆的闸门拉都拉不住。大家都是成年人啦，过去的事早渐渐烟消云散，说出来也只是一笑而过，之前答应了大家播一播，大家看看乐一乐就好，与其带节奏不如多花时间在自己的梦想和要追求的人和事上，这样，在你时隔多年后重温起现在的时光才能不悔")
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

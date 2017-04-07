@@ -20,6 +20,7 @@
 		CDB417641E95F18200DFCC1C /* WBRetweetedStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417631E95F18200DFCC1C /* WBRetweetedStatusView.swift */; };
 		CDB417661E95F19700DFCC1C /* WBStatusPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417651E95F19700DFCC1C /* WBStatusPictureView.swift */; };
 		CDB417681E95F1A900DFCC1C /* WBStatusToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417671E95F1A900DFCC1C /* WBStatusToolBar.swift */; };
+		CDB4176A1E96696100DFCC1C /* WBStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417691E96696000DFCC1C /* WBStatusViewModel.swift */; };
 		CDB53BD91E93EF2C005A0E80 /* WBLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BD81E93EF2C005A0E80 /* WBLoginController.swift */; };
 		CDB53BDB1E93F3D8005A0E80 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BDA1E93F3D8005A0E80 /* common.swift */; };
 		CDB53BDE1E93F68E005A0E80 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB53BDD1E93F68E005A0E80 /* NetworkTool.swift */; };
@@ -74,6 +75,7 @@
 		CDCA106C1E9129CC00485435 /* WBDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106B1E9129CC00485435 /* WBDiscoverController.swift */; };
 		CDCA106E1E9129DB00485435 /* WBMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106D1E9129DB00485435 /* WBMessageController.swift */; };
 		CDCA10701E9129EB00485435 /* WBProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106F1E9129EB00485435 /* WBProfileController.swift */; };
+		CDD95A151E972CE000E06309 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD95A141E972CE000E06309 /* Date+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,7 @@
 		CDB417631E95F18200DFCC1C /* WBRetweetedStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBRetweetedStatusView.swift; sourceTree = "<group>"; };
 		CDB417651E95F19700DFCC1C /* WBStatusPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusPictureView.swift; sourceTree = "<group>"; };
 		CDB417671E95F1A900DFCC1C /* WBStatusToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusToolBar.swift; sourceTree = "<group>"; };
+		CDB417691E96696000DFCC1C /* WBStatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusViewModel.swift; sourceTree = "<group>"; };
 		CDB53BD81E93EF2C005A0E80 /* WBLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLoginController.swift; sourceTree = "<group>"; };
 		CDB53BDA1E93F3D8005A0E80 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		CDB53BDD1E93F68E005A0E80 /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 		CDCA106B1E9129CC00485435 /* WBDiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDiscoverController.swift; sourceTree = "<group>"; };
 		CDCA106D1E9129DB00485435 /* WBMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMessageController.swift; sourceTree = "<group>"; };
 		CDCA106F1E9129EB00485435 /* WBProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProfileController.swift; sourceTree = "<group>"; };
+		CDD95A141E972CE000E06309 /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +342,7 @@
 		CDCA101B1E91129B00485435 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CDB417691E96696000DFCC1C /* WBStatusViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				CDBB3AD31E91EEFE00DDE29A /* UILable+extension.swift */,
 				CDB53BDA1E93F3D8005A0E80 /* common.swift */,
 				CD9E68821E95054A008D62DC /* Bundle+JudgeVersion.swift */,
+				CDD95A141E972CE000E06309 /* Date+extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -590,11 +596,13 @@
 				CDCA105E1E91174B00485435 /* Debugging.swift in Sources */,
 				CDCA104A1E91174B00485435 /* ConstraintItem.swift in Sources */,
 				CDB53BE21E93F77B005A0E80 /* WBUserAccount.swift in Sources */,
+				CDB4176A1E96696100DFCC1C /* WBStatusViewModel.swift in Sources */,
 				CDB417601E95F0EE00DFCC1C /* WBStatusCell.swift in Sources */,
 				CDB417681E95F1A900DFCC1C /* WBStatusToolBar.swift in Sources */,
 				CDCA104F1E91174B00485435 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				CD9E68891E951ECA008D62DC /* WBPictureModel.swift in Sources */,
 				CDCA105C1E91174B00485435 /* ConstraintView.swift in Sources */,
+				CDD95A151E972CE000E06309 /* Date+extension.swift in Sources */,
 				CDBB3AD51E91EEFE00DDE29A /* UIColor+extension.swift in Sources */,
 				CD9E688B1E95227D008D62DC /* NetworkTool+status.swift in Sources */,
 				CDCA106E1E9129DB00485435 /* WBMessageController.swift in Sources */,

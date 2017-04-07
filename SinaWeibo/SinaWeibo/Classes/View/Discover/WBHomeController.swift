@@ -12,7 +12,7 @@ fileprivate let identifer = "homeCell"
 
 class WBHomeController: WBRootController {
     
-    var dataSourceArr:[WBStatusModel] = []
+    var dataSourceArr:[WBStatusViewModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,20 +37,28 @@ extension WBHomeController{
         
         
         if refreshHeader.isRefreshing(){
-            since_id = dataSourceArr.first?.id ?? 0
+            since_id = dataSourceArr.first?.statusModel.id ?? 0
         }else{
-            max_id = dataSourceArr.last?.id ?? 0
+            max_id = dataSourceArr.last?.statusModel.id ?? 0
             isPullDown = false
         }
         
         NetworkTool.shared.requestHomeStaus(since_id: since_id, max_id: max_id) { (responseObject) in
-            if var statusModelArr = responseObject as? [WBStatusModel]{
+            if let statusModelArr = responseObject as? [WBStatusModel]{
+                var viewModelArr:[WBStatusViewModel] = []
+                for model in statusModelArr{
+                    let viewModel = WBStatusViewModel(statusModel: model)
+                    viewModelArr.append(viewModel)
+                }
+                
                 if isPullDown == true{
-                    self.dataSourceArr = statusModelArr + self.dataSourceArr
+                    self.dataSourceArr = viewModelArr + self.dataSourceArr
                     self.refreshHeader.endRefreshing()
                 }else{
-                    statusModelArr.removeFirst()
-                    self.dataSourceArr += statusModelArr
+                    if viewModelArr.count > 0{
+                        viewModelArr.removeFirst()
+                    }
+                    self.dataSourceArr += viewModelArr
                     self.refreshFooter.endRefreshing()
                 }
                 self.tableView.reloadData()
@@ -65,7 +73,8 @@ extension WBHomeController{
 extension WBHomeController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifer, for: indexPath) as! WBStatusCell
-//        cell.textLabel?.text = dataSourceArr[indexPath.row].text
+        let viewModel = dataSourceArr[indexPath.row]
+        cell.statusViewModel = viewModel
         return cell
     }
     

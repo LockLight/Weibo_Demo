@@ -9,6 +9,13 @@
 import UIKit
 
 class WBStatusCell: UITableViewCell {
+    //微博数据模型
+    var statusViewModel:WBStatusViewModel?{
+        didSet{
+            originalStatusView.statusViewModel = statusViewModel
+        }
+    }
+    
     //原创微博视图
     lazy var originalStatusView:WBOriginalStatusView = WBOriginalStatusView()
     //转发微博视图
