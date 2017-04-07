@@ -21,6 +21,9 @@ class WBStatusViewModel: WBStatusModel {
     //经过处理的皇冠等级
     var levelIcon:UIImage?
     
+    //经过时间字符串
+    var timeStr:String?
+    
     init(statusModel:WBStatusModel){
         self.statusModel = statusModel
         super.init()
@@ -28,6 +31,7 @@ class WBStatusViewModel: WBStatusModel {
         dealWithSource()
         dealWithVip()
         dealWithLevelIcon()
+        dealWithTimeStr()
     }
     
     //处理微博来源字符串
@@ -60,6 +64,12 @@ class WBStatusViewModel: WBStatusModel {
     func dealWithLevelIcon(){
         if let mbrank = statusModel.user?.mbrank , mbrank>0 && mbrank<7{
             levelIcon = UIImage(named: "common_icon_membership_level\(mbrank)")
+        }
+    }
+    
+    func dealWithTimeStr(){
+        if let serverTime = statusModel.created_at {
+            timeStr = Date.requiredTimeStr(ServerTime: serverTime)
         }
     }
 }

@@ -19,6 +19,7 @@ class WBOriginalStatusView: UIView {
             sourceLabel.text = statusViewModel?.sourceStr
             vipIcon.image = statusViewModel?.vipIcon
             levelIcon.image = statusViewModel?.levelIcon
+            timeLabel.text = statusViewModel?.timeStr
         }
     }
     
