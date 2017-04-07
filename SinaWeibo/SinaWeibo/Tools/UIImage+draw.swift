@@ -27,4 +27,33 @@ extension UIImage {
         
         return image
     }
+    
+    func createCircleImage(color:UIColor = UIColor.yellow ,size:CGSize = CGSize.zero,callBack:@escaping (UIImage) -> ()){
+        DispatchQueue.global().async {
+            let rect = CGRect(origin: CGPoint.zero, size: size)
+            
+            //开始图形上下文
+            UIGraphicsBeginImageContext(size)
+            
+            //设置填充颜色
+            color.setFill()
+            UIRectFill(rect)
+            
+            //绘制圆形
+            let path = UIBezierPath(ovalIn: rect)
+            path.addClip()
+            
+            self.draw(in: rect)
+            
+            //从上下文获取图像
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            
+            //关闭上下文
+            UIGraphicsEndImageContext()
+            
+            DispatchQueue.main.async {
+               callBack(image!)
+            }
+        }
+    }
 }

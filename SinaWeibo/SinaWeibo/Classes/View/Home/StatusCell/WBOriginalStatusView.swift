@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import SDWebImage
 
 class WBOriginalStatusView: UIView {
     //微博数据的模型
     var statusViewModel:WBStatusViewModel?{
         didSet{
-            let url = URL(string: (statusViewModel?.statusModel.user?.avatar_large)!)
-            userIcon.sd_setImage(with: url!, placeholderImage: UIImage.init(named: "avatar_default_big"))
+//            userIcon.sd_setImage(with: url!, placeholderImage: UIImage.init(named: "avatar_default_big"))
             userNameLabel.text = statusViewModel?.statusModel.user?.screen_name
             statusLabel.text = statusViewModel?.statusModel.text
             sourceLabel.text = statusViewModel?.sourceStr
             vipIcon.image = statusViewModel?.vipIcon
             levelIcon.image = statusViewModel?.levelIcon
             timeLabel.text = statusViewModel?.timeStr
+            
+            //圆角头像的异步绘制
+            let url = URL(string: (statusViewModel?.statusModel.user?.avatar_large)!)
+            
+            SDWebImageManager.shared().downloadImage(with: url!, options: [], progress: nil) { (downloadimage, _, _, _, _) in
+                if let image = downloadimage {
+                    image.createCircleImage(size: wbStatusStruct.iconSize, callBack: { (circleImage) in
+                        self.userIcon.image = circleImage
+                    })
+                }
+            }
         }
     }
     

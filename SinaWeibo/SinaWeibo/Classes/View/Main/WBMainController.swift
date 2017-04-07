@@ -28,7 +28,6 @@ extension WBMainController{
 // MARK: - 设置UI
 extension WBMainController{
     func setupUI (){
-        self.view.backgroundColor = UIColor.white
         //添加子控制器
         addViewControllers()
         //添加发布按钮
@@ -104,7 +103,6 @@ extension WBMainController{
                     
                     controller.tabBarItem.image = image
                     controller.tabBarItem.selectedImage = selectedImage
-                    
                     
                     //访客视图的文本和图标信息赋值给controller
                     controller.visitorInfo = dict["visitorInfo"] as? [String:Any]

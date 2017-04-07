@@ -18,9 +18,13 @@ class WBRootController: UIViewController {
     lazy var refreshFooter:MJRefreshAutoNormalFooter = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadData))
     
     
-    /// tableViw
+    /// tableView
     lazy var tableView: UITableView = {
         let tableView = UITableView()
+        
+        tableView.backgroundColor = UIColor.white
+        tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+        tableView.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
         return tableView
@@ -40,6 +44,8 @@ class WBRootController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.tableView.separatorStyle = .none
         
         self.tableView.mj_header = refreshHeader
         self.tableView.mj_footer = refreshFooter
@@ -72,10 +78,13 @@ extension WBRootController {
     
     /// 设置tableView
     func setupTableView() {
+        self.automaticallyAdjustsScrollViewInsets = false
+        
         self.view.addSubview(tableView)
+        
         tableView.snp.makeConstraints { (make) in
             make.left.right.equalTo(self.view)
-            make.top.equalTo(self.view).offset(64)
+            make.top.equalTo(self.view)
             make.bottom.equalTo(self.view)
         }
     }
@@ -102,7 +111,9 @@ extension WBRootController:WBVisitorControllerDelegate{
 //MARK: - tableView的数据源
 extension WBRootController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        cell.selectionStyle = .none
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

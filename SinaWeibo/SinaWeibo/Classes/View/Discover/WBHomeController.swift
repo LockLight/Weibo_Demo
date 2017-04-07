@@ -17,7 +17,6 @@ class WBHomeController: WBRootController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.automaticallyAdjustsScrollViewInsets = false
         tableView.register(WBStatusCell.self, forCellReuseIdentifier: identifer)
         self.tableView.rowHeight = 200
         self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
@@ -69,12 +68,12 @@ extension WBHomeController{
 
 
 ///Mark:- UI相关
-
 extension WBHomeController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifer, for: indexPath) as! WBStatusCell
         let viewModel = dataSourceArr[indexPath.row]
         cell.statusViewModel = viewModel
+        cell.selectionStyle = .none
         return cell
     }
     
