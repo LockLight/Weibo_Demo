@@ -21,10 +21,16 @@ class WBRootController: UIViewController {
     /// tableView
     lazy var tableView: UITableView = {
         let tableView = UITableView()
-        
+        //自动行高
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
+
         tableView.backgroundColor = UIColor.white
+        //设置tableview离顶部的边距
         tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
         tableView.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
+        
+        
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
         return tableView
@@ -78,8 +84,6 @@ extension WBRootController {
     
     /// 设置tableView
     func setupTableView() {
-        self.automaticallyAdjustsScrollViewInsets = false
-        
         self.view.addSubview(tableView)
         
         tableView.snp.makeConstraints { (make) in

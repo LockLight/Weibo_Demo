@@ -30,6 +30,8 @@ extension WBStatusToolBar{
         let commentButton = UIButton(title: "30", titleColor: UIColor.gray, fontSize: 10, image: "timeline_icon_comment")
         let prizeButton = UIButton(title: "30", titleColor: UIColor.gray, fontSize: 10, image: "timeline_icon_unlike")
         
+        self.layer.borderWidth = 0.5
+        self.layer.borderColor = UIColor.lightGray.cgColor
         
         addSubview(retweetButton)
         addSubview(commentButton)
@@ -37,24 +39,21 @@ extension WBStatusToolBar{
         
         //自动布局
         retweetButton.snp.makeConstraints { (make) in
-            make.left.equalTo(self)
-            make.top.equalTo(self)
-            make.bottom.equalTo(self)
+            make.left.equalToSuperview()
+            make.top.bottom.equalToSuperview()
         }
         
         commentButton.snp.makeConstraints { (make) in
             make.left.equalTo(retweetButton.snp.right)
-            make.top.equalTo(retweetButton)
-            make.bottom.equalTo(retweetButton)
+            make.top.bottom.equalToSuperview()
             make.width.equalTo(retweetButton)
         }
         
         prizeButton.snp.makeConstraints { (make) in
             make.left.equalTo(commentButton.snp.right)
-            make.right.equalTo(self)
-            make.top.equalTo(commentButton)
-            make.bottom.equalTo(commentButton)
+            make.right.equalToSuperview()
             make.width.equalTo(commentButton)
+            make.top.bottom.equalToSuperview()
         }
     }
 }

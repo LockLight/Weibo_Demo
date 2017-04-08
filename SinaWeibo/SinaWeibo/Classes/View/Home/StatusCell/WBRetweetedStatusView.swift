@@ -9,16 +9,17 @@
 import UIKit
 
 class WBRetweetedStatusView: UIView {
-    //转发微博的label
-    lazy var retweetedStatusLabel:UILabel = UILabel(title: nil)
     
-    //微博数据模型
     var statusViewModel:WBStatusViewModel?{
         didSet{
-            retweetedStatusLabel.text = statusViewModel?.retweetedText
+            //转发微博正文
+            retweetedStatusLabel.text =  statusViewModel?.retweetedText
         }
     }
-
+    
+    //转发微博正文
+    lazy var retweetedStatusLabel:UILabel = UILabel(title: nil)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -31,13 +32,17 @@ class WBRetweetedStatusView: UIView {
 }
 
 extension WBRetweetedStatusView{
-    func setupUI(){
-        addSubview(retweetedStatusLabel)
+    fileprivate func setupUI(){
+        
+        self.backgroundColor = home_CellColor
+        self.addSubview(retweetedStatusLabel)
         
         retweetedStatusLabel.snp.makeConstraints { (make) in
-            make.left.top.equalTo(self).offset(wbStatusStruct.margin)
-            make.right.bottom.equalTo(self).offset(-wbStatusStruct.margin)
-        }
+            make.top.equalToSuperview().offset(10)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+            make.bottom.equalToSuperview().offset(-10)
+       }
     }
 }
 

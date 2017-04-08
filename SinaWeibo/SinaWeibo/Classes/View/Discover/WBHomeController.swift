@@ -18,9 +18,6 @@ class WBHomeController: WBRootController {
         super.viewDidLoad()
         
         tableView.register(WBStatusCell.self, forCellReuseIdentifier: identifer)
-        self.tableView.rowHeight = 200
-        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
-        
         loadData()
     }
 }
