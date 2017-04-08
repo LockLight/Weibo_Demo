@@ -13,7 +13,6 @@ class WBOriginalStatusView: UIView {
     //微博数据的模型
     var statusViewModel:WBStatusViewModel?{
         didSet{
-//            userIcon.sd_setImage(with: url!, placeholderImage: UIImage.init(named: "avatar_default_big"))
             userNameLabel.text = statusViewModel?.statusModel.user?.screen_name
             statusLabel.text = statusViewModel?.statusModel.text
             sourceLabel.text = statusViewModel?.sourceStr

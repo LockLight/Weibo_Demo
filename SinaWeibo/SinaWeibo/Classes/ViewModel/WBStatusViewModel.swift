@@ -24,6 +24,9 @@ class WBStatusViewModel: WBStatusModel {
     //经过时间字符串
     var timeStr:String?
     
+    //经过处理的转发微博文字
+    var retweetedText:String?
+    
     init(statusModel:WBStatusModel){
         self.statusModel = statusModel
         super.init()
@@ -32,6 +35,7 @@ class WBStatusViewModel: WBStatusModel {
         dealWithVip()
         dealWithLevelIcon()
         dealWithTimeStr()
+        dealWithRetweetedStatus()
     }
     
     //处理微博来源字符串
@@ -70,6 +74,13 @@ class WBStatusViewModel: WBStatusModel {
     func dealWithTimeStr(){
         if let serverTime = statusModel.created_at {
             timeStr = Date.requiredTimeStr(ServerTime: serverTime)
+        }
+    }
+    
+    func dealWithRetweetedStatus(){
+        if let userName = statusModel.retweeted_status?.user?.screen_name,
+            let text = statusModel.retweeted_status?.text {
+                retweetedText = "@\(userName): \(text)"
         }
     }
 }

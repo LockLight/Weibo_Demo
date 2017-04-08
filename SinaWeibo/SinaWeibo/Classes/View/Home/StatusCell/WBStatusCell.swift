@@ -13,6 +13,21 @@ class WBStatusCell: UITableViewCell {
     var statusViewModel:WBStatusViewModel?{
         didSet{
             originalStatusView.statusViewModel = statusViewModel
+            retweetedStatusView.statusViewModel = statusViewModel
+            
+            //如果模型中有转发微博
+            if let _ = statusViewModel?.statusModel.retweeted_status{
+                self.isHidden = false
+                retweetedStatusView.snp.updateConstraints { (make) in
+                    make.left.equalTo(self.contentView).offset(10)
+                    make.right.bottom.equalTo(self.contentView).offset(-10)
+                    make.top.equalTo(originalStatusView.snp.bottom)
+                }
+            }else{
+                self.isHidden = true
+                retweetedStatusView.snp.remakeConstraints({ (make) in
+                })
+            }
         }
     }
     
@@ -44,25 +59,26 @@ extension WBStatusCell{
 //        self.contentView.addSubview(statusPicView)
         self.contentView.addSubview(statusToolBar)
         
+        //设置子视图的颜色
+        contentView.backgroundColor = UIColor(white: 0.8, alpha: 1.0)
+        originalStatusView.backgroundColor = UIColor.white
+        retweetedStatusView.backgroundColor = UIColor(white: 0.8, alpha: 1.0)
         
-        originalStatusView.backgroundColor = UIColor.yellow
-        retweetedStatusView.backgroundColor = UIColor.green
-        statusToolBar.backgroundColor = UIColor.blue
         //约束
         originalStatusView.snp.makeConstraints { (make) in
-            make.top.left.right.equalTo(self.contentView)
-            make.height.equalTo(200)
+            make.top.equalTo(self.contentView).offset(5)
+            make.left.right.equalTo(self.contentView)
         }
         
         retweetedStatusView.snp.makeConstraints { (make) in
-            make.left.right.equalTo(self.contentView)
-            make.height.equalTo(200)
+            make.left.equalTo(self.contentView).offset(10)
+            make.right.bottom.equalTo(self.contentView).offset(-10)
             make.top.equalTo(originalStatusView.snp.bottom)
         }
         
         statusToolBar.snp.makeConstraints { (make) in
             make.left.right.bottom.equalTo(self.contentView)
-            make.height.equalTo(50)
+            make.height.equalTo(36)
             make.top.equalTo(retweetedStatusView.snp.bottom)
         }
     }

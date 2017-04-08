@@ -28,7 +28,7 @@ extension UIImage {
         return image
     }
     
-    func createCircleImage(color:UIColor = UIColor.yellow ,size:CGSize = CGSize.zero,callBack:@escaping (UIImage) -> ()){
+    func createCircleImage(color:UIColor = UIColor.white ,size:CGSize = CGSize.zero,callBack:@escaping (UIImage) -> ()){
         DispatchQueue.global().async {
             let rect = CGRect(origin: CGPoint.zero, size: size)
             
