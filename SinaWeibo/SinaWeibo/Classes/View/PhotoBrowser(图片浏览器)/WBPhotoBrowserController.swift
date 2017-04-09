@@ -44,7 +44,7 @@ class WBPhotoBrowserController: UIViewController {
 extension WBPhotoBrowserController{
     func setupUI(){
         //创建分页控制器
-        let pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionSpineLocationKey:20])
+        let pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey:20])
         
         //添加到当前控制器
         self.addChildViewController(pageVC)
@@ -85,10 +85,10 @@ extension WBPhotoBrowserController:UIPageViewControllerDataSource{
         let currentIndex = (viewController as! WBPhotoViewerController).index
         
         //到尾
-        if(currentIndex == pic_urlArr - 1){
+        if(currentIndex == pic_urlArr.count - 1){
             return nil
         }
-    
+
         let photoViewer = WBPhotoViewerController(index: currentIndex + 1, pic_urlArr: pic_urlArr)
         return photoViewer
     }
