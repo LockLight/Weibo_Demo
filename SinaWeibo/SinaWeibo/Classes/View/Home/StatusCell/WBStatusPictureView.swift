@@ -87,7 +87,7 @@ extension WBStatusPictureView{
             
             //添加手势
             imageView.isUserInteractionEnabled = true
-            let tap = UIGestureRecognizer(target: self, action: #selector(imgClicked(tap:)))
+            let tap = UITapGestureRecognizer(target: self, action: #selector(imgClicked(tap:)))
             imageView.addGestureRecognizer(tap)
         }
     }
@@ -95,9 +95,10 @@ extension WBStatusPictureView{
 
 //MARK: - 事件处理
 extension WBStatusPictureView{
-    func imgClicked(tap:UIGestureRecognizer){
+    func imgClicked(tap:UITapGestureRecognizer){
         let notification = Notification(name: picViewClickNotification)
         NotificationCenter.default.post(notification)
+        print(tap)
     }
 }
 

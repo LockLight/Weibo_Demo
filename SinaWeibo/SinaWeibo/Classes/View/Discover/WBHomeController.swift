@@ -33,7 +33,8 @@ class WBHomeController: WBRootController {
 //MARK: - 处理事件
 extension WBHomeController{
     func showPhotoBrowser(notify:Notification){
-        let photoBrowser = 
+        let photoBrowser = WBPhotoBrowserController()
+        present(photoBrowser, animated: false, completion: nil)
     }
 }
 
