@@ -29,6 +29,7 @@ class WBRootController: UIViewController {
         //设置tableview离顶部的边距
         tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
         tableView.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
+        tableView.showsVerticalScrollIndicator = false
         
         
         tableView.dataSource = self

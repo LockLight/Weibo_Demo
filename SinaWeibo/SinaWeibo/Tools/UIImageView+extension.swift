@@ -14,4 +14,13 @@ extension UIImageView {
         let image = UIImage(named: imageName)
         self.image = image
     }
+    
+    func wb_setImageView(urlStr:String,placehoder:String){
+        let url = URL(string: urlStr)
+        let placehoderImage = UIImage(named: placehoder)
+        
+        if let url = url,let placehoderImage = placehoderImage{
+            self.sd_setImage(with: url, placeholderImage:placehoderImage)
+        }
+    }
 }

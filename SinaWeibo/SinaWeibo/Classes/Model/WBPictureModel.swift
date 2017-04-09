@@ -11,7 +11,11 @@ import YYModel
 
 class WBPictureModel: NSObject {
     /// 微博的图片的缩略图的地址
-    var thumbnail_pic: String?
+    var thumbnail_pic: String?{
+        didSet{
+            thumbnail_pic = thumbnail_pic?.replacingOccurrences(of: "/thumbnail/", with: "/wap360/")
+        }
+    }
     
     /// 描述信息
     override var description: String {

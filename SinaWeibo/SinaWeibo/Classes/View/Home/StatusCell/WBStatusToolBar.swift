@@ -24,7 +24,7 @@ class WBStatusToolBar: UIView {
 extension WBStatusToolBar{
     func setupUI(){
         //patternImage: 将图片平铺
-        self.backgroundColor = UIColor(patternImage: UIImage(named: "timeline_card_bottom_line_highlighted")!)
+        self.backgroundColor = UIColor(patternImage: UIImage(named: "timeline_card_bottom_background")!)
         
         let retweetButton = UIButton(title: "30", titleColor: UIColor.gray, fontSize: 10, image: "timeline_icon_retweet")
         let commentButton = UIButton(title: "30", titleColor: UIColor.gray, fontSize: 10, image: "timeline_icon_comment")

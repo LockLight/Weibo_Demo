@@ -19,6 +19,7 @@ class WBOriginalStatusView: UIView {
             vipIcon.image = statusViewModel?.vipIcon
             levelIcon.image = statusViewModel?.levelIcon
             timeLabel.text = statusViewModel?.timeStr
+            picView.statusViewModel = statusViewModel
             
             //圆角头像的异步绘制
             let url = URL(string: (statusViewModel?.statusModel.user?.avatar_large)!)
@@ -30,21 +31,40 @@ class WBOriginalStatusView: UIView {
                     })
                 }
             }
+            
+            //根据是否存在配图模型更新约束
+            if let count = statusViewModel?.statusModel.pic_urls?.count,count > 0 {
+                picView.snp.updateConstraints({ (make) in
+                    make.top.equalTo(statusLabel.snp.bottom).offset(10)
+                    make.left.equalToSuperview().offset(10)
+                    make.bottom.equalToSuperview().offset(-10)
+                    make.size.equalTo((statusViewModel?.picViewSize)!)
+                })
+            }else{
+                picView.snp.updateConstraints({ (make) in
+                    make.top.equalTo(statusLabel.snp.bottom)
+                    make.left.equalToSuperview().offset(10)
+                    make.bottom.equalToSuperview().offset(-10)
+                    make.size.equalTo(CGSize.zero)
+                })
+            }
         }
     }
     
+    //微博配图
+    lazy var picView:WBStatusPictureView = WBStatusPictureView()
     //用户头像
     lazy var userIcon:UIImageView = UIImageView(imageName: "avatar_default_big")
     //用户的VIP图标
     lazy var vipIcon:UIImageView = UIImageView(imageName: "avatar_grassroot")
     //用户昵称
-    lazy var userNameLabel:UILabel = UILabel(title: "伟大领柚金三胖")
+    lazy var userNameLabel:UILabel = UILabel(title: "伟大领柚金三胖",textColor:UIColor.black)
     //用户皇冠等级
     lazy var levelIcon:UIImageView = UIImageView(imageName: "common_icon_membership_level6")
     //微博来源
-    lazy var sourceLabel:UILabel = UILabel(title: "新浪")
+    lazy var sourceLabel:UILabel = UILabel(title: "新浪", textColor:UIColor.lightGray, fontSize: 12)
     //微博的发布时间
-    lazy var timeLabel:UILabel = UILabel(title: "两小时前")
+    lazy var timeLabel:UILabel = UILabel(title: "新浪", textColor:UIColor.darkGray, fontSize: 13)
     //微博征文的label
     lazy var statusLabel:UILabel = UILabel(title: "地雷哥回基地就狂吐了好几回，我闻着都要吐了[笑cry]今天其实在现场的感觉挺感动的，在当初很恶劣的电竞环境坚持下来的，现在回忆起当年，这几个哥们记忆的闸门拉都拉不住。大家都是成年人啦，过去的事早渐渐烟消云散，说出来也只是一笑而过，之前答应了大家播一播，大家看看乐一乐就好，与其带节奏不如多花时间在自己的梦想和要追求的人和事上，这样，在你时隔多年后重温起现在的时光才能不悔")
     
@@ -69,6 +89,7 @@ extension WBOriginalStatusView{
         addSubview(sourceLabel)
         addSubview(timeLabel)
         addSubview(statusLabel)
+        addSubview(picView)
         
         //约束
         userIcon.snp.makeConstraints { (make) in
@@ -107,7 +128,13 @@ extension WBOriginalStatusView{
             make.top.equalTo(userIcon.snp.bottom).offset(10)
             make.left.equalTo(userIcon)
             make.right.equalTo(self).offset(-10)
-            make.bottom.equalTo(self).offset(-10)
+        }
+        
+        picView.snp.makeConstraints { (make) in
+            make.top.equalTo(statusLabel.snp.bottom).offset(10)
+            make.left.equalToSuperview().offset(10)
+            make.bottom.equalToSuperview().offset(-10)
+            make.size.equalTo(CGSize.zero)
         }
     }
 }

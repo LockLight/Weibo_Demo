@@ -7,21 +7,35 @@
 //
 
 import UIKit
+import SDWebImage
 
 fileprivate let identifer = "homeCell"
 
 class WBHomeController: WBRootController {
     
     var dataSourceArr:[WBStatusViewModel] = []
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(WBStatusCell.self, forCellReuseIdentifier: identifer)
         loadData()
+        
+        //接收通知
+        NotificationCenter.default.addObserver(self, selector: #selector(showPhotoBrowser(notify:)), name: picViewClickNotification, object: nil)
     }
 }
 
+//MARK: - 处理事件
+extension WBHomeController{
+    func showPhotoBrowser(notify:Notification){
+        let photoBrowser = 
+    }
+}
 
 extension WBHomeController{
     override func loadData(){
@@ -57,10 +71,50 @@ extension WBHomeController{
                     self.dataSourceArr += viewModelArr
                     self.refreshFooter.endRefreshing()
                 }
-                self.tableView.reloadData()
+//                self.tableView.reloadData()
+                //刷新数据前需处理好所有图片的下载,以及图片比例的调整
+                self.dealWithSinglePic(viewModelArr: viewModelArr, callback: { (isCompletion) in
+                    
+                    self.tableView.reloadData()
+                })
             }
         }
     }
+    
+    func dealWithSinglePic(viewModelArr:[WBStatusViewModel],callback:@escaping (Bool) -> ()){
+        //创建调度组
+        let group = DispatchGroup()
+        //遍历模型数组,异步下载单张图片,并调整比例
+        for viewModel in viewModelArr{
+            if let pic_urlArr = viewModel.pic_urlArr,pic_urlArr.count == 1{
+                group.enter()
+                let urlStr = pic_urlArr[0].thumbnail_pic
+                let url = URL(string: urlStr!)
+                
+                //异步下载
+                SDWebImageManager.shared().downloadImage(with: url!, options: [], progress: nil, completed: { (singleImage, _, _, _, _) in
+                    if let singleImage = singleImage{
+                        var imgSize =  singleImage.size
+                        
+                        //当图片宽度超过屏幕约束宽度
+                        if imgSize.width > screenWidth - 20{
+                            let newWidth = screenWidth - 60
+                            imgSize.height = imgSize.height/imgSize.width * newWidth
+                            imgSize.width = newWidth
+                        }
+                        print(imgSize)
+                        viewModel.picViewSize = imgSize
+                        
+                        group.leave()
+                    }
+                })
+            }
+        }
+        group.notify(queue: DispatchQueue.main) { 
+            callback(true)
+        }
+    }
+    
 }
 
 

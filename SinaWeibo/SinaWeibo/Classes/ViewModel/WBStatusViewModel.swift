@@ -27,6 +27,12 @@ class WBStatusViewModel: WBStatusModel {
     //经过处理的转发微博文字
     var retweetedText:String?
     
+    //处理配图的数组
+    var pic_urlArr: [WBPictureModel]? = []
+    
+    //计算后的配图的size
+    var picViewSize:CGSize = CGSize.zero
+    
     init(statusModel:WBStatusModel){
         self.statusModel = statusModel
         super.init()
@@ -36,6 +42,31 @@ class WBStatusViewModel: WBStatusModel {
         dealWithLevelIcon()
         dealWithTimeStr()
         dealWithRetweetedStatus()
+        setPicurls()
+        caculatePicView()
+    }
+    
+    func caculatePicView(){
+        let imageHeight = wbStatusStruct.imageHeight
+        
+        if let count = pic_urlArr?.count,count > 0{
+            //计算图片行数
+            let rows = (count - 1)/3 + 1
+            let picViewH = CGFloat(rows) * imageHeight + CGFloat((rows - 1)) * wbStatusStruct.margin
+            let picViewW = screenWidth - wbStatusStruct.margin * 2
+            picViewSize = CGSize(width: picViewW, height: picViewH)
+        }
+    }
+    
+    func setPicurls(){
+        //原创微博与转发微博只能有其中一个有配图的情况
+        if let count = statusModel.pic_urls?.count,count > 0{
+            pic_urlArr = statusModel.pic_urls
+            return
+        }
+        if let count = statusModel.retweeted_status?.pic_urls?.count,count > 0{
+            pic_urlArr = statusModel.retweeted_status?.pic_urls
+        }
     }
     
     //处理微博来源字符串
