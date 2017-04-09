@@ -9,27 +9,35 @@
 import UIKit
 
 class WBPhotoViewerController: UIViewController {
+    
+    //当前展示图片的index
+    var index:Int = 0
+    
+    //图片的url数组
+    var pic_urlArr:[String] = []
+    
+    //重载构造函数,设置所需参数
+    init(index:Int, pic_urlArr:[String]){
+        super.init(nibName: nil, bundle: nil)
+        
+        self.index = index
+        self.pic_urlArr = pic_urlArr
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("第\(index)张图片,url地址是\(pic_urlArr[index])")
+        setupUI()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension WBPhotoViewerController{
+    func setupUI(){
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

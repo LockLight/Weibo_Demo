@@ -96,7 +96,22 @@ extension WBStatusPictureView{
 //MARK: - 事件处理
 extension WBStatusPictureView{
     func imgClicked(tap:UITapGestureRecognizer){
-        let notification = Notification(name: picViewClickNotification)
+        //获取当前点击图片的index
+        var index = (tap.view?.tag)! - baseTag
+        
+        //图片为4张时,第3张图片的index -1
+        if let pic_urlArr = statusViewModel?.pic_urlArr,pic_urlArr.count == 4,index > 2{
+            index -= 1
+        }
+        
+        //获取模型中的url数组,需转换为OC,swift中无API
+        let picUrlArr = ((statusViewModel?.pic_urlArr)! as NSArray).value(forKeyPath: "middle_pic") as! [String]
+        
+        //传递index与图片地址数组给图片浏览器
+        let userInfo:[String:Any] = ["index":index,"picUrlArr":picUrlArr]
+        
+        //图片点击通知
+        let notification = Notification(name: picViewClickNotification, object: nil, userInfo: userInfo)
         NotificationCenter.default.post(notification)
         print(tap)
     }
