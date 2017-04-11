@@ -78,6 +78,7 @@
 		CDCA106E1E9129DB00485435 /* WBMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106D1E9129DB00485435 /* WBMessageController.swift */; };
 		CDCA10701E9129EB00485435 /* WBProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106F1E9129EB00485435 /* WBProfileController.swift */; };
 		CDD95A151E972CE000E06309 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD95A141E972CE000E06309 /* Date+extension.swift */; };
+		CDE5DE311E9CA97E002BD34C /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5DE301E9CA97E002BD34C /* WBStatusListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +158,7 @@
 		CDCA106D1E9129DB00485435 /* WBMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMessageController.swift; sourceTree = "<group>"; };
 		CDCA106F1E9129EB00485435 /* WBProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProfileController.swift; sourceTree = "<group>"; };
 		CDD95A141E972CE000E06309 /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		CDE5DE301E9CA97E002BD34C /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				CDB417691E96696000DFCC1C /* WBStatusViewModel.swift */,
+				CDE5DE301E9CA97E002BD34C /* WBStatusListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				CDCA105E1E91174B00485435 /* Debugging.swift in Sources */,
 				CDCA104A1E91174B00485435 /* ConstraintItem.swift in Sources */,
 				CDB53BE21E93F77B005A0E80 /* WBUserAccount.swift in Sources */,
+				CDE5DE311E9CA97E002BD34C /* WBStatusListViewModel.swift in Sources */,
 				CDB4176A1E96696100DFCC1C /* WBStatusViewModel.swift in Sources */,
 				CDB417601E95F0EE00DFCC1C /* WBStatusCell.swift in Sources */,
 				CDB417681E95F1A900DFCC1C /* WBStatusToolBar.swift in Sources */,

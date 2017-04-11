@@ -39,7 +39,7 @@ class WBPhotoViewerController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.groupTableViewBackground
 
         print("第\(index)张图片,url地址是\(pic_urlArr[index])")
         setupUI()
