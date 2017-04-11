@@ -48,6 +48,6 @@ struct WBStatusStruct {
 let wbStatusStruct = WBStatusStruct()
 
 //MARK: - 首页的cell分割颜色
-let home_CellColor = UIColor(white: 0.8, alpha: 1.0)
+let home_CellColor = UIColor(white: 0.9, alpha: 1.0)
 
 

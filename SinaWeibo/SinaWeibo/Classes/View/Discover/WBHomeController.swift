@@ -43,6 +43,8 @@ extension WBHomeController{
     }
 }
 
+
+//MARK: - 加载数据
 extension WBHomeController{
     override func loadData(){
         //设置初始id值,since_id 下拉刷新需要的id  max_id 上拉刷新需要的id
@@ -96,6 +98,7 @@ extension WBHomeController{
                 group.enter()
                 let urlStr = pic_urlArr[0].thumbnail_pic
                 let url = URL(string: urlStr!)
+                print("----\(url!)----")
                 
                 //异步下载
                 SDWebImageManager.shared().downloadImage(with: url!, options: [], progress: nil, completed: { (singleImage, _, _, _, _) in
@@ -124,7 +127,7 @@ extension WBHomeController{
 }
 
 
-///Mark:- UI相关
+//MARK:- 数据源
 extension WBHomeController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifer, for: indexPath) as! WBStatusCell

@@ -27,7 +27,7 @@ class WBStatusPictureView: UIView {
                     let imageView = self.viewWithTag(index + baseTag) as? UIImageView
                     imageView?.isHidden = false
                     imageView?.wb_setImageView(urlStr: picModel.thumbnail_pic!, placehoder: "avatar_default_big")
-                    
+                
                     //有且只有一张图片,等比显示
                     if index == 0 && pic_urlArr.count == 1{
                        imageView?.frame = CGRect(origin: CGPoint.zero, size: (statusViewModel?.picViewSize)!)
@@ -61,7 +61,7 @@ class WBStatusPictureView: UIView {
 extension WBStatusPictureView{
     func setupUI(){
         self.clipsToBounds = true
-        self.backgroundColor = UIColor.yellow
+        self.backgroundColor = UIColor.clear
         //创建9个imageView
         let imageWH = wbStatusStruct.imageHeight
         //下一个imageVIew的偏移量
@@ -69,7 +69,7 @@ extension WBStatusPictureView{
         
         for i in 0..<9{
             let imageView = UIImageView()
-            imageView.backgroundColor = UIColor.yellow
+            imageView.backgroundColor = UIColor.white
             addSubview(imageView)
             
             imageView.tag = i + baseTag

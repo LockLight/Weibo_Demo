@@ -13,7 +13,7 @@ class WBPictureModel: NSObject {
     /// 微博的图片的缩略图的地址
     var thumbnail_pic: String?{
         didSet{
-            middle_pic = thumbnail_pic?.replacingOccurrences(of: "/thumbnail/", with: "/bmiddel/")
+            middle_pic = thumbnail_pic?.replacingOccurrences(of: "/thumbnail/", with: "/bmiddle/")
             thumbnail_pic = thumbnail_pic?.replacingOccurrences(of: "/thumbnail/", with: "/wap360/")
         }
     }
