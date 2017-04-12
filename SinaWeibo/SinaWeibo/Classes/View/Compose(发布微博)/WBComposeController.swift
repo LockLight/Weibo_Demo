@@ -8,6 +8,9 @@
 
 import UIKit
 
+private let identifier = "identifier"
+private let maxPictureCount = 7
+
 class WBComposeController: WBRootController {
     
     //发布微博按钮
@@ -23,6 +26,7 @@ class WBComposeController: WBRootController {
     //输入微博的textView
     var textView:WBTextView = WBTextView()
     
+    //底部的toolBar
     lazy var toolBar:UIToolbar = {
         let toolBar = UIToolbar()
         //设置toolBar的背景图片,和阴影图片
@@ -35,12 +39,42 @@ class WBComposeController: WBRootController {
         var items:[UIBarButtonItem] = []
         //遍历字典创建items
         for dict in dictArr{
+            //toolBar图标
             let button = UIButton(title: nil, image: dict["image"] as? String, target: self, action: dict["selector"] as? Selector)
+            let btnItem = UIBarButtonItem(customView: button)
+            button.sizeToFit()
+            
+            //分隔图标
+            let blankBtn = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            
+            items.append(btnItem)
+            items.append(blankBtn)
         }
         
+        items.removeLast()
+        toolBar.items = items
         
         return toolBar
     }()
+    
+    //添加图片的视图
+    lazy var picView:UICollectionView = {
+        //设置layout
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: wbStatusStruct.imageHeight, height: wbStatusStruct.imageHeight)
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        
+        let collectionView =  UICollectionView(frame: CGRect.zero, collectionViewLayout:layout)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: identifier)
+        collectionView.dataSource = self
+    
+        return collectionView
+    }()
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +110,30 @@ extension WBComposeController{
         setNavigationBar()
         //设置输入微博的textView
         setTextView()
+        //设置底部toolBar
+        setToolBar()
+        //设置添加微博配图的collectionView
+        setpicView()
+    }
+    
+    func setpicView(){
+        textView.addSubview(picView)
+        picView.backgroundColor = UIColor.yellow
+        
+        picView.snp.makeConstraints { (make ) in
+            make.left.equalTo(self.textView.snp.left).offset(10)
+            make.top.equalTo(textView.snp.top).offset(100)
+            make.size.equalTo(CGSize(width: screenWidth - 20, height: screenHeight - 20))
+        }
+    }
+    
+    func setToolBar(){
+        view.addSubview(toolBar)
+        
+        //toolBar自带高度
+        toolBar.snp.makeConstraints { (make ) in
+            make.left.right.bottom.equalToSuperview()
+        }
     }
     
     func setTextView(){
@@ -114,6 +172,19 @@ extension WBComposeController{
         titleLabel.sizeToFit()
         
         navigationItem.titleView = titleLabel
+    }
+}
+
+//MARK:- colleciontView的数据源方法
+extension WBComposeController:UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:identifier, for: indexPath)
+        cell.backgroundColor = UIColor.randomColor()
+        return cell
     }
 }
 

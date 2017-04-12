@@ -61,7 +61,7 @@ extension WBTextView{
         
         addSubview(placeHoderLabel)
         let view  = UIView()
-        view.backgroundColor = UIColor.yellow
+        view.backgroundColor = UIColor.white
         insertSubview(view, at: 0)
         
         view.snp.makeConstraints { (make) in
