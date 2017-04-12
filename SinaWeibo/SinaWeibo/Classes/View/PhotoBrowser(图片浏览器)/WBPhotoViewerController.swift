@@ -53,7 +53,7 @@ extension WBPhotoViewerController{
         
         //异步下载展示图片
         let url = URL(string: pic_urlArr[index])
-        print("----\(url!)----")
+//        print("----\(url!)----")
         SDWebImageManager.shared().downloadImage(with: url!, options: [], progress: nil) { (middelImg, _,_, _, _) in
             if let middelImg = middelImg{
                 //下载完成后设置给当前的imageView

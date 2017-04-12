@@ -57,7 +57,7 @@ class WBStatusListViewModel: NSObject {
                 group.enter()
                 let urlStr = pic_urlArr[0].thumbnail_pic
                 let url = URL(string: urlStr!)
-                print("----\(url!)----")
+//                print("----\(url!)----")
                 
                 //异步下载
                 SDWebImageManager.shared().downloadImage(with: url!, options: [], progress: nil, completed: { (singleImage, _, _, _, _) in
@@ -70,7 +70,7 @@ class WBStatusListViewModel: NSObject {
                             imgSize.height = imgSize.height/imgSize.width * newWidth
                             imgSize.width = newWidth
                         }
-                        print(imgSize)
+//                        print(imgSize)
                         viewModel.picViewSize = imgSize
                         
                         group.leave()

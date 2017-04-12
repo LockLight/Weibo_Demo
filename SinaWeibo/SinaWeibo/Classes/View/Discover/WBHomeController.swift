@@ -56,8 +56,25 @@ extension WBHomeController{
             isPullDown = false
         }
         
-        let updateUIClousure = {
-            (isSuccess:Bool) in
+//        let updateUIClousure = {
+//            (isSuccess:Bool) in
+//            if isSuccess{
+//                self.tableView.reloadData()
+//                if isPullDown == true {
+//                    self.refreshHeader.endRefreshing()
+//                }else{
+//                    self.refreshFooter.endRefreshing()
+//                }
+//            }else{
+//                if isPullDown == true {
+//                    self.refreshHeader.endRefreshing()
+//                }else{
+//                    self.refreshFooter.endRefreshing()
+//                }
+//            }
+//        }
+//        self.statusListViewModel.loadData(isPullDown: isPullDown, callBack: updateUIClousure)
+        self.statusListViewModel.loadData(isPullDown: isPullDown) { (isSuccess) in
             if isSuccess{
                 self.tableView.reloadData()
                 if isPullDown == true {
@@ -72,8 +89,7 @@ extension WBHomeController{
                     self.refreshFooter.endRefreshing()
                 }
             }
-        }
-        self.statusListViewModel.loadData(isPullDown: isPullDown, callBack: updateUIClousure)
+       }
     }
 }
 

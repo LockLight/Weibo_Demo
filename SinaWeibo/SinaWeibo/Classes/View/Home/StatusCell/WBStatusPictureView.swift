@@ -79,7 +79,7 @@ extension WBStatusPictureView{
             let col = i%3
             //原型imageView的frame
             let prototypeFrame = CGRect(x: 0, y: 0, width: imageWH, height: imageWH)
-            let frame = prototypeFrame.offsetBy(dx:CGFloat(row) * offset, dy: CGFloat(col) * offset)
+            let frame = prototypeFrame.offsetBy(dx:CGFloat(col) * offset, dy: CGFloat(row) * offset)
             imageView.frame = frame
             //图片填充模式
             imageView.contentMode = .scaleAspectFill
@@ -98,7 +98,7 @@ extension WBStatusPictureView{
     func imgClicked(tap:UITapGestureRecognizer){
         //获取当前点击图片的index
         var index = (tap.view?.tag)! - baseTag
-        
+    
         //图片为4张时,第3张图片的index -1
         if let pic_urlArr = statusViewModel?.pic_urlArr,pic_urlArr.count == 4,index > 2{
             index -= 1
@@ -113,7 +113,7 @@ extension WBStatusPictureView{
         //图片点击通知
         let notification = Notification(name: picViewClickNotification, object: nil, userInfo: userInfo)
         NotificationCenter.default.post(notification)
-        print(tap)
+//        print(tap)
     }
 }
 

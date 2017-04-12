@@ -79,6 +79,7 @@
 		CDCA10701E9129EB00485435 /* WBProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA106F1E9129EB00485435 /* WBProfileController.swift */; };
 		CDD95A151E972CE000E06309 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD95A141E972CE000E06309 /* Date+extension.swift */; };
 		CDE5DE311E9CA97E002BD34C /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5DE301E9CA97E002BD34C /* WBStatusListViewModel.swift */; };
+		CDE5DE341E9CECC6002BD34C /* WBComposeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5DE331E9CECC6002BD34C /* WBComposeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +160,7 @@
 		CDCA106F1E9129EB00485435 /* WBProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProfileController.swift; sourceTree = "<group>"; };
 		CDD95A141E972CE000E06309 /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		CDE5DE301E9CA97E002BD34C /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusListViewModel.swift; sourceTree = "<group>"; };
+		CDE5DE331E9CECC6002BD34C /* WBComposeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +301,7 @@
 		CDCA10151E91129B00485435 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CDE5DE321E9CEC9A002BD34C /* Compose(发布微博) */,
 				CD2BBAC91E9A5DD90078630E /* PhotoBrowser(图片浏览器) */,
 				CD9E687D1E95001B008D62DC /* NewFeature(新特性与欢迎页) */,
 				CDB53BD71E93EF00005A0E80 /* Login(登录页面) */,
@@ -438,6 +441,14 @@
 				CDCA10411E91174B00485435 /* UILayoutSupport+Extensions.swift */,
 			);
 			path = SnapKit;
+			sourceTree = "<group>";
+		};
+		CDE5DE321E9CEC9A002BD34C /* Compose(发布微博) */ = {
+			isa = PBXGroup;
+			children = (
+				CDE5DE331E9CECC6002BD34C /* WBComposeController.swift */,
+			);
+			path = "Compose(发布微博)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -608,6 +619,7 @@
 				CD9E68831E95054A008D62DC /* Bundle+JudgeVersion.swift in Sources */,
 				CDCA106A1E9129B800485435 /* WBHomeController.swift in Sources */,
 				CDB417661E95F19700DFCC1C /* WBStatusPictureView.swift in Sources */,
+				CDE5DE341E9CECC6002BD34C /* WBComposeController.swift in Sources */,
 				CDCA10701E9129EB00485435 /* WBProfileController.swift in Sources */,
 				CD9E68871E951EAA008D62DC /* WBStatusModel.swift in Sources */,
 				CDCA105E1E91174B00485435 /* Debugging.swift in Sources */,

@@ -21,7 +21,15 @@ class WBMainController: UITabBarController {
 // MARK: - 交互
 extension WBMainController{
     func composeBtnClick(btn:UIButton){
-        print("发布微博")
+        if WBUserAccount.shared.isLogin{
+            let compose = WBComposeController()
+            let navi = UINavigationController(rootViewController: compose)
+            present(navi, animated: false, completion: nil)
+        }else{
+            let login = WBLoginController()
+            let navi = UINavigationController(rootViewController:login)
+            present(navi, animated: false, completion: nil)
+        }
     }
 }
 
@@ -81,6 +89,8 @@ extension WBMainController{
             self.viewControllers = controllers
         }
     }
+    
+    
     
     func createSingleController(dict: [String: Any]) -> UINavigationController? {
         if let clsName = dict["clsName"]{
