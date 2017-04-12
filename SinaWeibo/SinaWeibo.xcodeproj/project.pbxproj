@@ -17,6 +17,7 @@
 		CD9E68871E951EAA008D62DC /* WBStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68861E951EAA008D62DC /* WBStatusModel.swift */; };
 		CD9E68891E951ECA008D62DC /* WBPictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E68881E951ECA008D62DC /* WBPictureModel.swift */; };
 		CD9E688B1E95227D008D62DC /* NetworkTool+status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E688A1E95227D008D62DC /* NetworkTool+status.swift */; };
+		CDA94E9C1E9DE515005CDD79 /* WBTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA94E9B1E9DE515005CDD79 /* WBTextView.swift */; };
 		CDB417601E95F0EE00DFCC1C /* WBStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4175F1E95F0EE00DFCC1C /* WBStatusCell.swift */; };
 		CDB417621E95F11F00DFCC1C /* WBOriginalStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417611E95F11F00DFCC1C /* WBOriginalStatusView.swift */; };
 		CDB417641E95F18200DFCC1C /* WBRetweetedStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB417631E95F18200DFCC1C /* WBRetweetedStatusView.swift */; };
@@ -95,6 +96,7 @@
 		CD9E68861E951EAA008D62DC /* WBStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusModel.swift; sourceTree = "<group>"; };
 		CD9E68881E951ECA008D62DC /* WBPictureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPictureModel.swift; sourceTree = "<group>"; };
 		CD9E688A1E95227D008D62DC /* NetworkTool+status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkTool+status.swift"; sourceTree = "<group>"; };
+		CDA94E9B1E9DE515005CDD79 /* WBTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTextView.swift; sourceTree = "<group>"; };
 		CDB4175F1E95F0EE00DFCC1C /* WBStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCell.swift; sourceTree = "<group>"; };
 		CDB417611E95F11F00DFCC1C /* WBOriginalStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBOriginalStatusView.swift; sourceTree = "<group>"; };
 		CDB417631E95F18200DFCC1C /* WBRetweetedStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBRetweetedStatusView.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE5DE331E9CECC6002BD34C /* WBComposeController.swift */,
+				CDA94E9B1E9DE515005CDD79 /* WBTextView.swift */,
 			);
 			path = "Compose(发布微博)";
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				CDCA10441E91174B00485435 /* ConstraintConfig.swift in Sources */,
 				CDCA10431E91174B00485435 /* ConstraintAttributes.swift in Sources */,
 				CDCA10681E91293A00485435 /* WBRootController.swift in Sources */,
+				CDA94E9C1E9DE515005CDD79 /* WBTextView.swift in Sources */,
 				CDB53BDE1E93F68E005A0E80 /* NetworkTool.swift in Sources */,
 				CDB53BDB1E93F3D8005A0E80 /* common.swift in Sources */,
 				CDCA10451E91174B00485435 /* ConstraintConstantTarget.swift in Sources */,

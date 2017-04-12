@@ -9,6 +9,38 @@
 import UIKit
 
 class WBComposeController: WBRootController {
+    
+    //发布微博按钮
+    lazy var composeBtn:UIButton = {
+        let composeBtn = UIButton(title: "发布", titleColor: UIColor.white, fontSize: 14, bgImage: "new_feature_finish_button", target: self, action: #selector(compose))
+        composeBtn.setBackgroundImage(UIImage(named:"common_button_white_disable"), for: .disabled)
+        composeBtn.setTitleColor(UIColor.gray, for: .disabled)
+        
+        composeBtn.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
+        return composeBtn
+    }()
+    
+    //输入微博的textView
+    var textView:WBTextView = WBTextView()
+    
+    lazy var toolBar:UIToolbar = {
+        let toolBar = UIToolbar()
+        //设置toolBar的背景图片,和阴影图片
+        toolBar.setShadowImage(UIImage.pureImage(color: UIColor(white: 0.9, alpha: 0.9)), forToolbarPosition: .any)
+        toolBar.setBackgroundImage(UIImage(named: "compose_toolbar_background"), forToolbarPosition: .any, barMetrics: .default)
+        
+        //设置toolBar的items
+        let dictArr:[[String:Any]] = [["image":"compose_mentionbutton_background", "selector": #selector(changeKeyBoard)], ["image":"compose_trendbutton_background", "selector": #selector(changeKeyBoard)], ["image":"compose_camerabutton_background", "selector": #selector(changeKeyBoard)], ["image":"compose_emoticonbutton_background", "selector": #selector(changeKeyBoard)], ["image":"compose_keyboardbutton_background", "selector": #selector(changeKeyBoard)]]
+        
+        var items:[UIBarButtonItem] = []
+        //遍历字典创建items
+        for dict in dictArr{
+            let button = UIButton(title: nil, image: dict["image"] as? String, target: self, action: dict["selector"] as? Selector)
+        }
+        
+        
+        return toolBar
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +64,32 @@ extension WBComposeController{
     func compose(){
         print("发布微博")
     }
+    
+    func changeKeyBoard(){
+        print("点击键盘")
+    }
 }
 
 extension WBComposeController{
     override func setupUI() {
         //设置导航栏
         setNavigationBar()
+        //设置输入微博的textView
+        setTextView()
+    }
+    
+    func setTextView(){
+        view.addSubview(textView)
+        textView.placeHoder = "Hello,World"
+        textView.font = UIFont.systemFont(ofSize: 14)
+        textView.delegate = self
+        textView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    
+        textView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view)
+            make.left.right.equalTo(self.view)
+            make.bottom.equalTo(self.view)
+        }
     }
     
     func setNavigationBar(){
@@ -48,11 +100,6 @@ extension WBComposeController{
         navigationItem.leftBarButtonItem = leftBtn
         
         //发布按钮
-        let composeBtn = UIButton(title: "发布", titleColor: UIColor.white, fontSize: 14, bgImage: "new_feature_finish_button", target: self, action: #selector(compose))
-        composeBtn.setBackgroundImage(UIImage(named:"common_button_white_disable"), for: .disabled)
-        composeBtn.setTitleColor(UIColor.gray, for: .disabled)
-        
-        composeBtn.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
         let rightBtn = UIBarButtonItem(customView: composeBtn)
         navigationItem.rightBarButtonItem = rightBtn
         
@@ -69,3 +116,14 @@ extension WBComposeController{
         navigationItem.titleView = titleLabel
     }
 }
+
+//MARK:- textView的代理方法
+extension WBComposeController:UITextViewDelegate{
+    func textViewDidChange(_ textView: UITextView) {
+        composeBtn.isEnabled = textView.text.characters.count > 0
+    }
+}
+
+
+
+
