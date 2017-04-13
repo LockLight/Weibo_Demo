@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIImage {
+    //图片平铺
     class func pureImage(color: UIColor = UIColor.white, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
         //1. 开始图形上下文
         UIGraphicsBeginImageContext(size)
@@ -28,6 +29,7 @@ extension UIImage {
         return image
     }
     
+    //绘制圆角头像
     func createCircleImage(color:UIColor = UIColor.white ,size:CGSize = CGSize.zero,callBack:@escaping (UIImage) -> ()){
         DispatchQueue.global().async {
             let rect = CGRect(origin: CGPoint.zero, size: size)
@@ -56,4 +58,26 @@ extension UIImage {
             }
         }
     }
+    
+    //根据当前上下文裁剪图片,以压缩大小
+    func resizeImage(color:UIColor = UIColor.white,size:CGSize = CGSize(width: 1, height: 1),callBack: @escaping (UIImage?) -> ()){
+        DispatchQueue.global().async {
+            let rect = CGRect(origin: CGPoint.zero, size: size)
+            
+            UIGraphicsBeginImageContext(size)
+            
+            color.setFill()
+            UIRectFill(rect)
+            
+            self.draw(in: rect)
+            
+            let image =  UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            DispatchQueue.main.async {
+               callBack(image)
+            }
+        }
+    }
+    
 }

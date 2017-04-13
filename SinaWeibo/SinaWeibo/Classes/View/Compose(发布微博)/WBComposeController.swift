@@ -13,6 +13,12 @@ private let maxPictureCount = 7
 
 class WBComposeController: WBRootController {
     
+    //数据源数组
+    var dataSourceArr:[UIImage] = []
+    
+    //选中cell的Index
+    var selectedIndex:Int = 0
+    
     //发布微博按钮
     lazy var composeBtn:UIButton = {
         let composeBtn = UIButton(title: "发布", titleColor: UIColor.white, fontSize: 14, bgImage: "new_feature_finish_button", target: self, action: #selector(compose))
@@ -66,7 +72,7 @@ class WBComposeController: WBRootController {
         layout.minimumInteritemSpacing = 10
         
         let collectionView =  UICollectionView(frame: CGRect.zero, collectionViewLayout:layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: identifier)
+        collectionView.register(WBPicViewCell.self, forCellWithReuseIdentifier: identifier)
         collectionView.dataSource = self
     
         return collectionView
@@ -123,7 +129,7 @@ extension WBComposeController{
         picView.snp.makeConstraints { (make ) in
             make.left.equalTo(self.textView.snp.left).offset(10)
             make.top.equalTo(textView.snp.top).offset(100)
-            make.size.equalTo(CGSize(width: screenWidth - 20, height: screenHeight - 20))
+            make.size.equalTo(CGSize(width: screenWidth - 20, height:screenWidth - 20))
         }
     }
     
@@ -178,13 +184,57 @@ extension WBComposeController{
 //MARK:- colleciontView的数据源方法
 extension WBComposeController:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return dataSourceArr.count == maxPictureCount ? maxPictureCount :dataSourceArr.count+1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:identifier, for: indexPath) as! WBPicViewCell
         cell.backgroundColor = UIColor.randomColor()
+        cell.delegate = self
+        
+        if indexPath.item == dataSourceArr.count{
+            cell.image = nil
+        }else{
+            cell.image = dataSourceArr[indexPath.item]
+        }
+        
         return cell
+    }
+}
+
+//MARK:- imagePickerController的代理方法
+extension WBComposeController:UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let originPic = info[UIImagePickerControllerOriginalImage] as!UIImage
+        
+        originPic.resizeImage(size:CGSize(width:100,height:100)) { (image) in
+            if self.selectedIndex == self.dataSourceArr.count{
+                self.dataSourceArr.append(image!)
+            }else{
+                self.dataSourceArr[self.selectedIndex] = image!
+            }
+            self.picView.reloadData()
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+}
+
+//MARK:- WBPicviewCell的代理方法
+extension WBComposeController:WBPicViewCellDelegate{
+    func addOrReplacePicView(cell: WBPicViewCell) {
+        selectedIndex = (picView.indexPath(for: cell)?.item)!
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func deletePic(cell: WBPicViewCell) {
+        let index = (picView.indexPath(for: cell)?.item)!
+        
+        dataSourceArr.remove(at: index)
+        picView.reloadData()
     }
 }
 
@@ -194,6 +244,8 @@ extension WBComposeController:UITextViewDelegate{
         composeBtn.isEnabled = textView.text.characters.count > 0
     }
 }
+
+
 
 
 
