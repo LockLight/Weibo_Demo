@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		716DF24E067E44A03AAAEE91 /* Pods_SinaWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */; };
+		CD0D30671EA0DC60006C5108 /* WBCustomKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D30661EA0DC60006C5108 /* WBCustomKeyBoard.swift */; };
 		CD2BBACB1E9A5E350078630E /* WBPhotoBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2BBACA1E9A5E340078630E /* WBPhotoBrowserController.swift */; };
 		CD2BBACD1E9A64DE0078630E /* WBPhotoViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2BBACC1E9A64DE0078630E /* WBPhotoViewerController.swift */; };
 		CD9E687F1E950039008D62DC /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E687E1E950039008D62DC /* WBNewFeatureView.swift */; };
@@ -88,6 +89,7 @@
 		02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinaWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2B2EC9A1BBFCC1EDB702D9 /* Pods-SinaWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 		6AF7D130B3462326A8D397B8 /* Pods-SinaWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.release.xcconfig"; sourceTree = "<group>"; };
+		CD0D30661EA0DC60006C5108 /* WBCustomKeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCustomKeyBoard.swift; sourceTree = "<group>"; };
 		CD2BBACA1E9A5E340078630E /* WBPhotoBrowserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPhotoBrowserController.swift; sourceTree = "<group>"; };
 		CD2BBACC1E9A64DE0078630E /* WBPhotoViewerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPhotoViewerController.swift; sourceTree = "<group>"; };
 		CD9E687E1E950039008D62DC /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
@@ -194,6 +196,14 @@
 				02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD0D30651EA0DC40006C5108 /* CustomKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D30661EA0DC60006C5108 /* WBCustomKeyBoard.swift */,
+			);
+			path = CustomKeyBoard;
 			sourceTree = "<group>";
 		};
 		CD2BBAC91E9A5DD90078630E /* PhotoBrowser(图片浏览器) */ = {
@@ -450,6 +460,7 @@
 		CDE5DE321E9CEC9A002BD34C /* Compose(发布微博) */ = {
 			isa = PBXGroup;
 			children = (
+				CD0D30651EA0DC40006C5108 /* CustomKeyBoard */,
 				CDE5DE331E9CECC6002BD34C /* WBComposeController.swift */,
 				CDA94E9B1E9DE515005CDD79 /* WBTextView.swift */,
 				CDA94E9D1E9E599A005CDD79 /* WBPicViewCell.swift */,
@@ -630,6 +641,7 @@
 				CDE5DE341E9CECC6002BD34C /* WBComposeController.swift in Sources */,
 				CDCA10701E9129EB00485435 /* WBProfileController.swift in Sources */,
 				CD9E68871E951EAA008D62DC /* WBStatusModel.swift in Sources */,
+				CD0D30671EA0DC60006C5108 /* WBCustomKeyBoard.swift in Sources */,
 				CDCA105E1E91174B00485435 /* Debugging.swift in Sources */,
 				CDCA104A1E91174B00485435 /* ConstraintItem.swift in Sources */,
 				CDB53BE21E93F77B005A0E80 /* WBUserAccount.swift in Sources */,

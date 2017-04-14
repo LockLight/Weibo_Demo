@@ -17,7 +17,7 @@ class WBComposeController: WBRootController {
     //数据源数组
     var dataSourceArr:[UIImage] = []
     
-    //选中cell的Index
+    //选中配图cell的Index
     var selectedIndex:Int = 0
     
     //发布微博按钮
@@ -79,6 +79,19 @@ class WBComposeController: WBRootController {
         return collectionView
     }()
     
+    //记录键盘类型,0-系统键盘  1-自定义键盘
+    var keyboardType:Int = 0
+    
+    //自定义键盘
+    lazy var customKeyboard:WBCustomKeyBoard = {
+        let myKeyboard = WBCustomKeyBoard(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 216))
+        myKeyboard.backgroundColor = UIColor(patternImage:UIImage(named:"emoticon_keyboard_background")!)
+        return myKeyboard
+    }()
+    
+    //toolBar是否执行动画
+    var isAnimation:Bool = true
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -87,21 +100,21 @@ class WBComposeController: WBRootController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.randomColor()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        //监听键盘frame变化
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChanged(notificantion:)), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
 }
 
 
 //MARK: - 事件处理
 extension WBComposeController{
+    //返回
     func back(){
         dismiss(animated: false, completion: nil)
     }
     
+    //发微博
     func compose(){
         SVProgressHUD.show()
         //初始化图片二进制数据
@@ -124,8 +137,48 @@ extension WBComposeController{
         }
     }
     
+    //切换键盘
     func changeKeyBoard(){
         print("点击键盘")
+        
+        isAnimation = false
+        //取消第一响应者,在text输入框使用为隐藏键盘
+        textView.resignFirstResponder()
+        isAnimation = true
+        
+        if keyboardType == 0{
+            textView.inputView = self.customKeyboard
+            keyboardType = 1
+        }else{
+            textView.inputView = nil
+            keyboardType = 0
+        }
+        
+        textView.becomeFirstResponder() //弹出键盘
+    }
+    
+    
+    //键盘frame变化通知事件
+    func keyboardWillChanged(notificantion:Notification){
+        if isAnimation == true {
+            if let userInfo = notificantion.userInfo,
+                let rect = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue,
+                let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval{
+                
+                let frameEndY = rect.cgRectValue.origin.y
+                let offset = frameEndY - screenHeight
+                
+                //调整toolBar布局
+                toolBar.snp.updateConstraints({ (make) in
+                    make.bottom.equalTo(self.view).offset(offset)
+                })
+
+                //动画强制更新
+                UIView.animate(withDuration: duration, animations: { 
+                    self.view.layoutIfNeeded()
+                })
+            }
+        }
     }
 }
 

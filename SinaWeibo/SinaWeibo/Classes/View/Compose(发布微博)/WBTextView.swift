@@ -14,10 +14,6 @@ class WBTextView: UITextView {
     var placeHoder:String = "请输入文字..."{
         didSet{
             placeHoderLabel.text = placeHoder
-            
-            addObserver(<#T##observer: NSObject##NSObject#>, forKeyPath: <#T##String#>, options: <#T##NSKeyValueObservingOptions#>, context: <#T##UnsafeMutablePointer<Void>#>)
-            
-            
         }
     }
     
