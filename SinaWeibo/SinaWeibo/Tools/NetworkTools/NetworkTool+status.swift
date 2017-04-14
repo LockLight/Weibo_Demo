@@ -30,4 +30,25 @@ extension NetworkTool{
             callBack(nil)
         }
     }
+    
+
+    func uploadStatus(status: String, imageData: Data?, callBack:@escaping (Any?)->()) {
+        let parameters = ["access_token": (WBUserAccount.shared.access_token)!, "status": status]
+        
+        if let imageData = imageData {
+            let url = "https://upload.api.weibo.com/2/statuses/upload.json"
+            
+            //调用网络中间层的上传文件的接口
+            self.upload(url: url, parameters: parameters, data: imageData, name: "pic", fileName: "abc.png") { (response) in
+                callBack(response)
+            }
+        } else {
+            let url = "https://api.weibo.com/2/statuses/update.json"
+            
+            //调用网络中间层的接口发布微博数据
+            self.request(url: url, method: "POST", parameters: parameters) { (response) in
+                callBack(response)
+            }
+        }
+    }
 }

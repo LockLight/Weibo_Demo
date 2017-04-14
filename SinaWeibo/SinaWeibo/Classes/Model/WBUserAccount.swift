@@ -45,7 +45,9 @@ class WBUserAccount: NSObject {
         
     }
     
-    ///用户是否登录
+    
+    
+    ///用户是否登录  2.00f8nTBC5uRvHE65fec29edb3vpRhD
     var isLogin: Bool {
         //根据access_token是否纯在或过期确定是否登录
         return access_token != nil && Date().timeIntervalSince(expires_date!) < 0

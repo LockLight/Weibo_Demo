@@ -37,4 +37,16 @@ class NetworkTool: AFHTTPSessionManager {
             })
         }
     }
+    
+    
+    func upload(url:String,parameters:Any?,data:Data,name:String,fileName:String,
+        callBack:@escaping (Any?)->()){
+        self.post(url, parameters: parameters, constructingBodyWith: { (bodyData) in
+            bodyData.appendPart(withFileData: data, name: name, fileName: fileName, mimeType: "application/octet-stream")
+        }, progress: nil, success: { (_ , response) in
+            callBack(response)
+        }) { (_ , error ) in
+            callBack(error)
+        }
+    }
 }

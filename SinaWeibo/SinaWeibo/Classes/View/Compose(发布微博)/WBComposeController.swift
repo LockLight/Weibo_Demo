@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 private let identifier = "identifier"
 private let maxPictureCount = 7
@@ -102,7 +103,25 @@ extension WBComposeController{
     }
     
     func compose(){
-        print("发布微博")
+        SVProgressHUD.show()
+        //初始化图片二进制数据
+        var imageData:Data?
+        
+        if(dataSourceArr.count > 0){
+            imageData = UIImagePNGRepresentation(dataSourceArr[0])
+        }
+        
+        NetworkTool.shared.uploadStatus(status: (textView.text)!, imageData: imageData) { (response) in
+        
+            SVProgressHUD.dismiss()
+            //收起键盘
+            self.textView.resignFirstResponder()
+            //延迟一秒弹出
+            let deadLineTime = DispatchTime.now() + .seconds(1)
+            DispatchQueue.main.asyncAfter(deadline: deadLineTime, execute: { 
+                self.dismiss(animated: true, completion: nil)
+            })
+        }
     }
     
     func changeKeyBoard(){
