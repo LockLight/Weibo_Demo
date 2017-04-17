@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		716DF24E067E44A03AAAEE91 /* Pods_SinaWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FB611597AA173400FAC29D /* Pods_SinaWeibo.framework */; };
 		CD0D30671EA0DC60006C5108 /* WBCustomKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D30661EA0DC60006C5108 /* WBCustomKeyBoard.swift */; };
+		CD0D30691EA0F12F006C5108 /* WBKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D30681EA0F12F006C5108 /* WBKeyboardToolbar.swift */; };
 		CD2BBACB1E9A5E350078630E /* WBPhotoBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2BBACA1E9A5E340078630E /* WBPhotoBrowserController.swift */; };
 		CD2BBACD1E9A64DE0078630E /* WBPhotoViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2BBACC1E9A64DE0078630E /* WBPhotoViewerController.swift */; };
 		CD9E687F1E950039008D62DC /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E687E1E950039008D62DC /* WBNewFeatureView.swift */; };
@@ -90,6 +91,7 @@
 		5B2B2EC9A1BBFCC1EDB702D9 /* Pods-SinaWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 		6AF7D130B3462326A8D397B8 /* Pods-SinaWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.release.xcconfig"; sourceTree = "<group>"; };
 		CD0D30661EA0DC60006C5108 /* WBCustomKeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCustomKeyBoard.swift; sourceTree = "<group>"; };
+		CD0D30681EA0F12F006C5108 /* WBKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBKeyboardToolbar.swift; sourceTree = "<group>"; };
 		CD2BBACA1E9A5E340078630E /* WBPhotoBrowserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPhotoBrowserController.swift; sourceTree = "<group>"; };
 		CD2BBACC1E9A64DE0078630E /* WBPhotoViewerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPhotoViewerController.swift; sourceTree = "<group>"; };
 		CD9E687E1E950039008D62DC /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				CD0D30661EA0DC60006C5108 /* WBCustomKeyBoard.swift */,
+				CD0D30681EA0F12F006C5108 /* WBKeyboardToolbar.swift */,
 			);
 			path = CustomKeyBoard;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				CDD95A151E972CE000E06309 /* Date+extension.swift in Sources */,
 				CDBB3AD51E91EEFE00DDE29A /* UIColor+extension.swift in Sources */,
 				CD9E688B1E95227D008D62DC /* NetworkTool+status.swift in Sources */,
+				CD0D30691EA0F12F006C5108 /* WBKeyboardToolbar.swift in Sources */,
 				CDCA106E1E9129DB00485435 /* WBMessageController.swift in Sources */,
 				CDCA10531E91174B00485435 /* ConstraintMakerFinalizable.swift in Sources */,
 				CDCA10511E91174B00485435 /* ConstraintMakerEditable.swift in Sources */,

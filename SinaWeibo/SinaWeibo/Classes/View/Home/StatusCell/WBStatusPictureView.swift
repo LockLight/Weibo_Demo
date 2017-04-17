@@ -8,7 +8,7 @@
 
 import UIKit
 
-let baseTag = 777
+fileprivate let baseTag = 777
 
 class WBStatusPictureView: UIView {
     
